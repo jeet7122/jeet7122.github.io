@@ -49,5 +49,20 @@ export const projects = [
       "Focused on intuitive controls and simple UI layers."
     ],
     "role_focus": "UI/UX, Game Logic"
-  }
+  },
+    {
+        "title": "URL-Shrink-It - Full Stack URL Management Platform",
+        "stack": ["Java", "Neon DB", "Spring Boot", "Spring Security", "React", "JWT"],
+        "repo": "https://urlshrinkit.store",
+        "description": "Production-ready URL management platform focused on secure backend APIs, authentication, analytics, and scalable data handling.",
+        "details": [
+            "Designed and implemented RESTful backend services using Spring Boot for URL creation, redirection, and analytics tracking.",
+            "Optimized database queries and API response handling, reducing response time for high-traffic endpoints from 3–4 seconds to approximately 500 milliseconds.",
+            "Implemented JWT-based authentication and authorization using Spring Security to protect backend endpoints.",
+            "Designed normalized relational database schemas in PostgreSQL (NeonDB) to ensure data integrity and scalability.",
+            "Implemented pagination and sorting using Spring Data JPA to efficiently manage large user datasets.",
+            "Deployed the backend on Render with environment-based configuration and secure database connectivity."
+        ],
+        "role_focus": "Backend Architecture, Performance Optimization, API Design"
+    }
 ]

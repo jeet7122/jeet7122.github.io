@@ -65,7 +65,7 @@ export default function HomeHero() {
             </div>
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-indigo-900/50 p-2 border-4 border-indigo-500/50 shadow-[0_0_40px_rgba(99,102,241,0.5)] transition-all duration-500 hover:shadow-[0_0_60px_rgba(99,102,241,0.8)]">
-                    <img src="/src/assets/imgs/profile2.png" alt="Profile" className="object-contain w-full h-full rounded-full transition-transform duration-500 hover:scale-105" onError={(e)=>{e.target.onerror=null; e.target.src='https://placehold.co/320x320/2563eb/ffffff?text=Profile+Photo'}} />
+                    <img src="imgs/profile.jpg" alt="Profile" className="object-contain w-full h-full rounded-full transition-transform duration-500 hover:scale-105" onError={(e)=>{e.target.onerror=null; e.target.src='https://placehold.co/320x320/2563eb/ffffff?text=Profile+Photo'}} />
                     <div className="absolute inset-0 rounded-full border-4 border-dashed border-indigo-400 opacity-30 animate-spin-slow"></div>
                 </div>
             </div>
