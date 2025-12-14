@@ -18,7 +18,7 @@ export const projects = [
     "repo": "https://github.com/jeet7122/Store-Mate",
     "description": "Desktop Point-of-Sale built in JavaFX, featuring product management, supplier modules, sales transactions, inventory tracking, and real-time UI dashboards.",
     "details": [
-      "Optimized database interaction code, <b>reducing reload time</b> for 4 critical endpoints <b>from 3-4 seconds to approx 500ms</b>.",
+      "Optimized database interaction code, reducing reload time for 4 critical endpoints from 3-4 seconds to approx 500ms.",
       "Implemented a modular DAO (Data Access Object) architecture with JDBC for clean separation of concerns.",
       "Developed Purchase & Inventory modules with supplier binding and dynamic transaction charts.",
       "Designed and enforced the development path, allocating and distributing tasks among team members."
