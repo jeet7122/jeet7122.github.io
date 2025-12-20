@@ -1,18 +1,20 @@
 export const projects = [
-  {
-    "title": "Monolith To Microservice Refactor",
-    "stack": ["Java", "Spring Boot", "Microservices", "Docker", "API Gateway", "Git/GitHub"],
-    "repo": "https://github.com/jeet7122/Monolith-To-Microservice",
-    "description": "Strategic refactor of a monolithic Java backend into decoupled Spring Boot microservices, designed for deployment automation, scalability, and independent service lifecycles.",
-    "details": [
-      "Led the decomposition into decoupled services (Auth, Orders, Product domains).",
-      "Implemented API Gateway for unified access and service routing.",
-      "Managed version control, acting as the final debugger and merge issue fixer (100+ commits).",
-      "Dockerized services for containerization and isolated scaling."
-    ],
-    "role_focus": "Architecture, Leadership, Performance"
-  },
-  {
+    {
+        "title": "Let_Us_Connect - Project Collaboration Hub",
+        "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Role-Based Access Control (RBAC)", "SMTP/Mailto Integration", "Database Management"],
+        "repo": "https://letusconnect-st.vercel.app",
+        "description": "A centralized networking platform designed for developers to showcase project ideas and find collaborators. The platform features a moderated submission workflow where an admin dashboard manages project visibility, ensuring high-quality content for the community of viewers.",
+        "details": [
+            "Architected a multi-role user system with dedicated views for Admins (moderation) and Viewers (collaboration).",
+            "Implemented an Admin Approval Workflow to vet project submissions, allowing for the approval or rejection of posts before they go live.",
+            "Integrated seamless collaboration triggers by mapping user profiles to direct email communication and GitHub repository links.",
+            "Designed a project showcase UI that highlights project overviews, technical goals, and development roadmaps to attract relevant contributors.",
+            "Built a responsive project discovery feed using Next.js, optimizing for fast navigation and clear calls-to-action (CTA) for collaboration.",
+            "Developed secure form handling with TypeScript to manage project metadata, including repository validation and contact information."
+        ],
+        "role_focus": "Product Engineering, Workflow Automation, RBAC Implementation, UI/UX Design"
+    },
+    {
     "title": "Store-Mate (Desktop POS System)",
     "stack": ["JavaFX", "MySQL", "JDBC", "DAO", "Performance Tuning"],
     "repo": "https://github.com/jeet7122/Store-Mate",
@@ -78,6 +80,21 @@ export const projects = [
             "Deployed backend on Render with environment-based configuration, ensuring 24x7 availability."
         ],
         "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
+    },
+    {
+        "title": "Explain-My-Errors - Next.js Error Analysis Platform",
+        "stack": ["Next.js", "TypeScript", "Gemini AI [Model 2.0 Flash]", "Server-Side Rendering (SSR)", "Async Communication", "Database Indexing", "Hashing"],
+        "repo": "https://error-normalizer.vercel.app",
+        "description": "A high-performance error analysis tool that leverages Gemini 2.0 Flash to explain code errors in real-time. Built with Next.js SSR for SEO and speed, the app features an optimized storage layer that utilizes input hashing and indexing for lightning-fast database lookups and error deduplication.",
+        "details": [
+            "Implemented Next.js Server-Side Rendering (SSR) to ensure fast initial page loads and improved SEO for public error logs.",
+            "Integrated Gemini 2.0 Flash API to provide instant, context-aware explanations for complex stack traces and debugging logs.",
+            "Developed a dual-storage strategy saving errors in raw text and SHA-256 hash formats to enable O(1) deduplication and quick database lookups.",
+            "Optimized database performance by creating composite indexes on User IDs and Input Hashes, significantly reducing query latency for returning users.",
+            "Architected an asynchronous communication flow to handle high-volume API requests without blocking the main UI thread.",
+            "Utilized TypeScript for end-to-end type safety, ensuring robust data handling between the Gemini API and the frontend components."
+        ],
+        "role_focus": "Fullstack Engineering, Performance Optimization, Database Architecture, AI Integration"
     }
 
 ]
