@@ -24,7 +24,7 @@ export default function ProjectCard({ project, onOpen }) {
           onClick={() => onOpen(project)}
           className="px-4 py-2 rounded-md border border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-black transition"
         >
-          View Project
+          View Details
         </button>
         <a
           href={project.repo}

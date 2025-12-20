@@ -3,12 +3,14 @@ import { Zap, ArrowRight, CornerRightUp } from 'lucide-react'
 import { Icon } from '@iconify/react';
 
 const heroSkills = [
-{ name: 'React', color: 'text-blue-400', icon: '⚛️' },
+{ name: 'React', color: 'text-blue-400', icon: <Icon icon="logos:react"/> },
 { name: 'JavaFX', color: 'text-white', icon: '▲' },
-{ name: 'Tailwind', color: 'text-cyan-400', icon: '🎨' },
+{ name: 'Tailwind', color: 'text-cyan-400', icon: <Icon icon="logos:tailwindcss-icon"/> },
 { name: 'Java', color: 'text-blue-500', icon: <Icon icon="logos:java" />},
-{ name: 'Node.js', color: 'text-green-500', icon: '🟢' },
-{ name: 'MYSQL', color: 'text-yellow-500', icon: <Icon icon="logos:mysql"/>},
+{ name: 'Node.js', color: 'text-green-500', icon: <Icon icon="logos:nodejs-icon"/> },
+{ name: 'MYSQL', color: 'text-yellow-500', icon: <Icon icon="logos:mysql-icon"/>},
+{ name: 'Next.js', color: 'text-white/60', icon: <Icon icon="logos:nextjs-icon" /> },
+  { name: 'TypeScript', color: 'text-blue-600', icon: <Icon icon="logos:typescript-icon" /> }
 ]
 
 export default function HomeHero() {
