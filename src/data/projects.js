@@ -12,6 +12,7 @@ export const projects = [
             "Built a responsive project discovery feed using Next.js, optimizing for fast navigation and clear calls-to-action (CTA) for collaboration.",
             "Developed secure form handling with TypeScript to manage project metadata, including repository validation and contact information."
         ],
+        "img_src": "imgs/ltc_project.png",
         "role_focus": "Product Engineering, Workflow Automation, RBAC Implementation, UI/UX Design"
     },
     {
@@ -38,88 +39,95 @@ export const projects = [
             "Engineered scalable backend logic using Drizzle ORM and PostgreSQL to ensure type-safe queries and reliable data persistence.",
             "Optimized UX flows to minimize friction in decision logging while maintaining structured, high-quality data input."
         ],
+        "img_src": "imgs/decision_replay_engine_project.png",
         "role_focus": "Full-Stack Product Engineering, AI Integration, Subscription Systems, Data Modeling, UX-Centered Design"
     },
     {
-            "title": "Explain-My-Errors - Next.js Error Analysis Platform",
-            "stack": ["Next.js", "TypeScript", "Gemini AI [Model 2.5 Flash]", "Server-Side Rendering (SSR)", "Async Communication", "Database Indexing", "Hashing"],
-            "repo": "https://error-normalizer.vercel.app",
-            "description": "A high-performance error analysis tool that leverages Gemini 2.0 Flash to explain code errors in real-time. Built with Next.js SSR for SEO and speed, the app features an optimized storage layer that utilizes input hashing and indexing for lightning-fast database lookups and error deduplication.",
-            "details": [
-                "Implemented Next.js Server-Side Rendering (SSR) to ensure fast initial page loads and improved SEO for public error logs.",
-                "Integrated Gemini 2.0 Flash API to provide instant, context-aware explanations for complex stack traces and debugging logs.",
-                "Developed a dual-storage strategy saving errors in raw text and SHA-256 hash formats to enable O(1) deduplication and quick database lookups.",
-                "Optimized database performance by creating composite indexes on User IDs and Input Hashes, significantly reducing query latency for returning users.",
-                "Architected an asynchronous communication flow to handle high-volume API requests without blocking the main UI thread.",
-                "Utilized TypeScript for end-to-end type safety, ensuring robust data handling between the Gemini API and the frontend components."
-            ],
-            "role_focus": "Fullstack Engineering, Performance Optimization, Database Architecture, AI Integration"
+        "title": "Explain-My-Errors - Next.js Error Analysis Platform",
+        "stack": ["Next.js", "TypeScript", "Gemini AI [Model 2.5 Flash]", "Server-Side Rendering (SSR)", "Async Communication", "Database Indexing", "Hashing"],
+        "repo": "https://error-normalizer.vercel.app",
+        "description": "A high-performance error analysis tool that leverages Gemini 2.0 Flash to explain code errors in real-time. Built with Next.js SSR for SEO and speed, the app features an optimized storage layer that utilizes input hashing and indexing for lightning-fast database lookups and error deduplication.",
+        "details": [
+            "Implemented Next.js Server-Side Rendering (SSR) to ensure fast initial page loads and improved SEO for public error logs.",
+            "Integrated Gemini 2.0 Flash API to provide instant, context-aware explanations for complex stack traces and debugging logs.",
+            "Developed a dual-storage strategy saving errors in raw text and SHA-256 hash formats to enable O(1) deduplication and quick database lookups.",
+            "Optimized database performance by creating composite indexes on User IDs and Input Hashes, significantly reducing query latency for returning users.",
+            "Architected an asynchronous communication flow to handle high-volume API requests without blocking the main UI thread.",
+            "Utilized TypeScript for end-to-end type safety, ensuring robust data handling between the Gemini API and the frontend components."
+        ],
+        "img_src": "imgs/error_normalizer_project.png",
+        "role_focus": "Fullstack Engineering, Performance Optimization, Database Architecture, AI Integration"
     },
     {
-    "title": "Store-Mate (Desktop POS System)",
-    "stack": ["JavaFX", "MySQL", "JDBC", "DAO", "Performance Tuning"],
-    "repo": "https://github.com/jeet7122/Store-Mate",
-    "description": "Desktop Point-of-Sale built in JavaFX, featuring product management, supplier modules, sales transactions, inventory tracking, and real-time UI dashboards.",
-    "details": [
-      "Optimized database interaction code, reducing reload time for 4 critical endpoints from 3-4 seconds to approx 500ms.",
-      "Implemented a modular DAO (Data Access Object) architecture with JDBC for clean separation of concerns.",
-      "Developed Purchase & Inventory modules with supplier binding and dynamic transaction charts.",
-      "Designed and enforced the development path, allocating and distributing tasks among team members."
-    ],
-    "role_focus": "Performance Optimization, Leadership, Full-Stack"
-  },
-  {
-          "title": "URL-Shrink-It - Full Stack URL Management Platform",
-          "stack": ["Java", "Neon DB", "Spring Boot", "Spring Security", "React", "JWT"],
-          "repo": "https://urlshrinkit.store",
-          "description": "Production-ready URL management platform focused on secure backend APIs, authentication, analytics, and scalable data handling.",
-          "details": [
-              "Designed and implemented RESTful backend services using Spring Boot for URL creation, redirection, and analytics tracking.",
-              "Optimized database queries and API response handling, reducing response time for high-traffic endpoints from 3–4 seconds to approximately 500 milliseconds.",
-              "Implemented JWT-based authentication and authorization using Spring Security to protect backend endpoints.",
-              "Designed normalized relational database schemas in PostgreSQL (NeonDB) to ensure data integrity and scalability.",
-              "Implemented pagination and sorting using Spring Data JPA to efficiently manage large user datasets.",
-              "Deployed the backend on Render with environment-based configuration and secure database connectivity."
-          ],
-          "role_focus": "Backend Architecture, Performance Optimization, API Design"
-      },
-      {
-              "title": "AI Research Assistant - Chrome Extension",
-              "stack": ["Java", "Gemini AI [Model 2.5 Flash]", "Spring Boot", "Spring WebFlux", "Manifest.json", "Vanilla JS", "Chrome Extension APIs"],
-              "repo": "https://github.com/jeet7122/AI-RESEARCH-ASSISTANT-UI",
-              "description": "Lightweight Chrome extension for summarizing text and web pages. Users interact via the extension, which stores notes locally in Chrome Storage, while backend API calls are handled asynchronously using Spring WebFlux. No individual API keys or databases are required.",
-              "details": [
-                  "Developed asynchronous backend services using Spring WebFlux to handle summarization requests efficiently.",
-                  "Integrated Gemini AI model for fast text summarization and content processing.",
-                  "Built Chrome extension using Vanilla JS to manage DOM interactions, handle user notes, and store them in Chrome local storage.",
-                  "Optimized frontend-backend communication with asynchronous API calls, reducing latency and improving user experience.",
-                  "Deployed backend on Render with environment-based configuration, ensuring 24x7 availability."
-              ],
-              "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
-          },
-  {
-    "title": "DR-DESK (Clinic Management App)",
-    "stack": ["JavaFX", "PostgreSQL", "Java", "MVC"],
-    "repo": "https://github.com/jeet7122/DR-DESK",
-    "description": "Clinic management desktop application to efficiently manage patient records, appointments, medical history, billing, and visit tracking with clean UI components.",
-    "details": [
-      "Implemented structured data models using the MVC pattern for maintainability.",
-      "Developed persistent patient history and time-based reporting features.",
-      "Provided smooth session management, multi-view navigation, and user authentication.",
-      "Led the team, distributed tasks, and ensured adherence to real-world healthcare workflows."
-    ],
-    "role_focus": "Leadership, Database Design, MVC Architecture"
-  },
-  {
-    "title": "JavaJacks (Blackjack Game)",
-    "stack": ["JavaFX", "Java", "File I/O"],
-    "repo": "https://github.com/starboundtd12/JavaJacks",
-    "description": "Blackjack desktop game built using JavaFX, showcasing UI state transitions, card animations, and robust game logic.",
-    "details": [
-      "Implemented a reliable turn-based card engine and dealer logic.",
-      "Developed a dynamic scoring system with smooth hand animations and deck handling.",
-      "Focused on intuitive controls and simple UI layers."
-    ],
-    "role_focus": "UI/UX, Game Logic"
-  }
+        "title": "Store-Mate (Desktop POS System)",
+        "stack": ["JavaFX", "MySQL", "JDBC", "DAO", "Performance Tuning"],
+        "repo": "https://github.com/jeet7122/Store-Mate",
+        "description": "Desktop Point-of-Sale built in JavaFX, featuring product management, supplier modules, sales transactions, inventory tracking, and real-time UI dashboards.",
+        "details": [
+            "Optimized database interaction code, reducing reload time for 4 critical endpoints from 3-4 seconds to approx 500ms.",
+            "Implemented a modular DAO (Data Access Object) architecture with JDBC for clean separation of concerns.",
+            "Developed Purchase & Inventory modules with supplier binding and dynamic transaction charts.",
+            "Designed and enforced the development path, allocating and distributing tasks among team members."
+        ],
+        "img_src": "null",
+        "role_focus": "Performance Optimization, Leadership, Full-Stack"
+    },
+    {
+        "title": "URL-Shrink-It - Full Stack URL Management Platform",
+        "stack": ["Java", "Neon DB", "Spring Boot", "Spring Security", "React", "JWT"],
+        "repo": "https://urlshrinkit.store",
+        "description": "Production-ready URL management platform focused on secure backend APIs, authentication, analytics, and scalable data handling.",
+        "details": [
+            "Designed and implemented RESTful backend services using Spring Boot for URL creation, redirection, and analytics tracking.",
+            "Optimized database queries and API response handling, reducing response time for high-traffic endpoints from 3–4 seconds to approximately 500 milliseconds.",
+            "Implemented JWT-based authentication and authorization using Spring Security to protect backend endpoints.",
+            "Designed normalized relational database schemas in PostgreSQL (NeonDB) to ensure data integrity and scalability.",
+            "Implemented pagination and sorting using Spring Data JPA to efficiently manage large user datasets.",
+            "Deployed the backend on Render with environment-based configuration and secure database connectivity."
+        ],
+        "img_src": "imgs/shrinkit_project.png",
+        "role_focus": "Backend Architecture, Performance Optimization, API Design"
+    },
+    {
+        "title": "AI Research Assistant - Chrome Extension",
+        "stack": ["Java", "Gemini AI [Model 2.5 Flash]", "Spring Boot", "Spring WebFlux", "Manifest.json", "Vanilla JS", "Chrome Extension APIs"],
+        "repo": "https://github.com/jeet7122/AI-RESEARCH-ASSISTANT-UI",
+        "description": "Lightweight Chrome extension for summarizing text and web pages. Users interact via the extension, which stores notes locally in Chrome Storage, while backend API calls are handled asynchronously using Spring WebFlux. No individual API keys or databases are required.",
+        "details": [
+            "Developed asynchronous backend services using Spring WebFlux to handle summarization requests efficiently.",
+            "Integrated Gemini AI model for fast text summarization and content processing.",
+            "Built Chrome extension using Vanilla JS to manage DOM interactions, handle user notes, and store them in Chrome local storage.",
+            "Optimized frontend-backend communication with asynchronous API calls, reducing latency and improving user experience.",
+            "Deployed backend on Render with environment-based configuration, ensuring 24x7 availability."
+        ],
+        "img_src": "null",
+        "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
+    },
+    {
+        "title": "DR-DESK (Clinic Management App)",
+        "stack": ["JavaFX", "PostgreSQL", "Java", "MVC"],
+        "repo": "https://github.com/jeet7122/DR-DESK",
+        "description": "Clinic management desktop application to efficiently manage patient records, appointments, medical history, billing, and visit tracking with clean UI components.",
+        "details": [
+            "Implemented structured data models using the MVC pattern for maintainability.",
+            "Developed persistent patient history and time-based reporting features.",
+            "Provided smooth session management, multi-view navigation, and user authentication.",
+            "Led the team, distributed tasks, and ensured adherence to real-world healthcare workflows."
+        ],
+        "img_src": "null",
+        "role_focus": "Leadership, Database Design, MVC Architecture"
+    },
+    {
+        "title": "JavaJacks (Blackjack Game)",
+        "stack": ["JavaFX", "Java", "File I/O"],
+        "repo": "https://github.com/starboundtd12/JavaJacks",
+        "description": "Blackjack desktop game built using JavaFX, showcasing UI state transitions, card animations, and robust game logic.",
+        "details": [
+            "Implemented a reliable turn-based card engine and dealer logic.",
+            "Developed a dynamic scoring system with smooth hand animations and deck handling.",
+            "Focused on intuitive controls and simple UI layers."
+        ],
+        "img_src": "null",
+        "role_focus": "UI/UX, Game Logic"
+    }
 ]

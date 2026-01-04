@@ -1,123 +1,103 @@
 // src/components/experience/ExperienceTimeline.jsx
-
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 import ExperienceItem from "./ExperienceItem";
 
 export default function ExperienceTimeline({ items }) {
-  const containerRef = useRef(null);
-  
-  // FIX: Use useState with an initializer function to create the array of ref objects ONCE.
-  // This array (itemRefs) is now treated as a stable state value, allowing access in render.
-  const [itemRefs] = useState(() => 
-    items.map(() => ({ current: null })) // Initialize the array of { current: null } objects
-  ); 
+    const containerRef = useRef(null);
 
-  // We no longer need refsInitialized state.
-  const [ballYPosition, setBallYPosition] = useState(0);
+    // Create stable refs for the ball-tracking logic
+    const [itemRefs] = useState(() =>
+        items.map(() => ({ current: null }))
+    );
 
-  // EFFECT 1: Set initial position
-  // This now relies directly on the stable itemRefs state array.
-  useEffect(() => {
-    // Check if the array length matches (simple validation)
-    if (itemRefs.length !== items.length) {
-        // Handle case where items changed dynamically after first mount (optional error boundary)
-        console.error("Timeline items changed after initial render. Dynamic refs may be out of sync.");
-        return;
-    }
-    
-    // Set the initial position
-    if (itemRefs[0] && itemRefs[0].current && containerRef.current) {
-        const containerTop = containerRef.current.getBoundingClientRect().top + window.scrollY;
-        const firstCircleTop = itemRefs[0].current.getBoundingClientRect().top + window.scrollY;
-        // The +10 adjustment is for the 20px marker circle's center (as used previously).
-        setBallYPosition(firstCircleTop - containerTop + 10);
-    }
-    
-    // Dependencies are only static refs and the itemRefs array reference itself.
-  }, [itemRefs, items.length]); 
+    const [ballYPosition, setBallYPosition] = useState(0);
 
-  // EFFECT 2: Scroll Logic 
-  useEffect(() => {
-    const handleScroll = () => {
-      const container = containerRef.current;
-      if (!container) return;
-      
-      const containerRect = container.getBoundingClientRect();
-      const containerTop = containerRect.top + window.scrollY;
-
-      // Access itemRefs (the stable state array) directly
-      const itemPositions = itemRefs.map(ref => {
-        // We still need to access ref.current here, but it's inside an Effect, which is fine.
-        if (!ref.current) return null;
-        const rect = ref.current.getBoundingClientRect();
-        const centerY = (rect.top + window.scrollY) - containerTop + 10;
-        return centerY;
-      }).filter(pos => pos !== null);
-      
-      if (itemPositions.length === 0) return;
-
-      const currentScrollY = window.scrollY;
-      const timelineScrollY = currentScrollY - containerTop;
-
-      let activeIndex = 0;
-      for (let i = 0; i < itemPositions.length; i++) {
-        if (i < itemPositions.length - 1) {
-          const midpoint = (itemPositions[i] + itemPositions[i + 1]) / 2;
-          if (timelineScrollY > midpoint) {
-            activeIndex = i + 1;
-          } else {
-            break;
-          }
+    // Initialize ball position
+    useEffect(() => {
+        if (itemRefs[0]?.current && containerRef.current) {
+            const containerTop = containerRef.current.getBoundingClientRect().top + window.scrollY;
+            const firstMarkerTop = itemRefs[0].current.getBoundingClientRect().top + window.scrollY;
+            setBallYPosition(firstMarkerTop - containerTop);
         }
-      }
+    }, [itemRefs, items.length]);
 
-      let newBallYPosition = itemPositions[activeIndex];
+    // Scroll Tracking Logic
+    useEffect(() => {
+        const handleScroll = () => {
+            const container = containerRef.current;
+            if (!container) return;
 
-      if (activeIndex < itemPositions.length - 1) {
-        const startY = itemPositions[activeIndex];
-        const endY = itemPositions[activeIndex + 1];
-        const progressSegment = (timelineScrollY - startY) / (endY - startY);
+            const containerRect = container.getBoundingClientRect();
+            const containerTop = containerRect.top + window.scrollY;
 
-        if (progressSegment > 0 && progressSegment < 1) {
-          newBallYPosition = startY + progressSegment * (endY - startY);
-        }
-      } else if (activeIndex === itemPositions.length - 1) {
-        newBallYPosition = itemPositions[itemPositions.length - 1];
-      }
-      
-      if (!isNaN(newBallYPosition)) {
-          setBallYPosition(newBallYPosition);
-      }
-    };
+            const itemPositions = itemRefs.map(ref => {
+                if (!ref.current) return null;
+                const rect = ref.current.getBoundingClientRect();
+                return (rect.top + window.scrollY) - containerTop;
+            }).filter(pos => pos !== null);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    // Dependency array relies on itemRefs (stable state value) and items.length for list count integrity
-  }, [itemRefs, items.length]); 
+            if (itemPositions.length === 0) return;
 
-  return (
-    <section ref={containerRef} className="relative pl-8 space-y-8">
-      {/* static line (3px wide) */}
-      <div className="absolute left-0 top-0 w-[3px] bg-gray-700 h-full" />
+            const timelineScrollY = window.scrollY - containerTop + (window.innerHeight / 3);
 
-      {/* Blue Moving Ball */}
-      <div
-        className="absolute -left-[6.5px] w-4 h-4 rounded-full bg-indigo-500 shadow-lg z-10" 
-        style={{
-          transform: `translateY(${ballYPosition - 8}px)`, 
-          transition: 'transform 0.1s linear', 
-        }}
-      />
+            let activeIndex = 0;
+            for (let i = 0; i < itemPositions.length; i++) {
+                if (timelineScrollY > itemPositions[i]) {
+                    activeIndex = i;
+                }
+            }
 
-      {items.map((item, index) => (
-        // FIX: Accessing itemRefs[index] now works because itemRefs is a stable state value (from useState),
-        // not a mutable ref container's .current property.
-        <ExperienceItem 
-          key={item.title} 
-          item={item} 
-          itemRef={itemRefs[index]} 
-        />
-      ))}
-    </section>
-  );
+            let newY = itemPositions[activeIndex];
+
+            // Interpolate between points for smooth movement
+            if (activeIndex < itemPositions.length - 1) {
+                const startY = itemPositions[activeIndex];
+                const endY = itemPositions[activeIndex + 1];
+                const progress = (timelineScrollY - startY) / (endY - startY);
+                if (progress > 0 && progress < 1) {
+                    newY = startY + progress * (endY - startY);
+                }
+            }
+
+            setBallYPosition(newY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [itemRefs, items.length]);
+
+    return (
+        <section ref={containerRef} className="relative pl-8  px-4 py-6 max-w-4xl mx-auto">
+            {/* Vertical Rail */}
+            <div className="absolute left-0 top-0 w-[2px] bg-gray-800 h-full" />
+
+            {/* The Moving Active Ball */}
+            <motion.div
+                className="absolute -left-[7px] w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.8)] z-10"
+                style={{ top: ballYPosition }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            />
+
+            {items.map((item, index) => (
+                <motion.div
+                    key={item.title + index}
+                    initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    viewport={{ once: true, margin: "-10% 0px" }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.1,
+                        ease: [0.21, 0.47, 0.32, 0.98]
+                    }}
+                >
+                    <ExperienceItem
+                        item={item}
+                        itemRef={itemRefs[index]}
+                    />
+                </motion.div>
+            ))}
+        </section>
+    );
 }

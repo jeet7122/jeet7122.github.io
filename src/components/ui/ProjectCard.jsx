@@ -3,6 +3,11 @@
 export default function ProjectCard({ project, onOpen }) {
   return (
     <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:bg-gray-850 transition">
+        {project.img_src !== "null" ? (
+            <div>
+                <img src={project.img_src} alt="project" />
+            </div>
+        ) : (<div></div>)}
       <h3 className="text-xl font-bold text-white">{project.title}</h3>
       <p className="text-sm text-blue-400 mt-1">{project.type}</p>
 
