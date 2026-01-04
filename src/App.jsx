@@ -19,7 +19,9 @@ export default function App() {
               I am a software developer with a passion for building clean,
               practical, and user-focused solutions. I specialize in full-stack
               development, creating intuitive interfaces with technologies like{" "}
-              <span className="text-blue-400">React</span> and
+              <span className="text-blue-400">React, </span>
+              <span className="text-amber-400/70">Next.js </span>
+               and
               <span className="text-cyan-300"> Tailwind CSS</span>, while
               delivering scalable backend systems using{" "}
               <span className="text-orange-400">Java</span> and

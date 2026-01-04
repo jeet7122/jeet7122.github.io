@@ -43,7 +43,7 @@ export default function HomeHero() {
                     </h2>
                 </div>
                 <p className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
-                Relentless self-taught developer, passionate about crafting high-performance <span className="font-semibold text-indigo-300">Java</span> solutions,
+                Relentless self-taught developer, passionate about crafting high-performance <span className="font-semibold text-indigo-300">Fullstack</span> solutions,
                 and driven to grow rapidly in the tech industry</p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start">
                     <a href="#contact" onClick={(e) => scrollToSection(e, '#contact')} className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
