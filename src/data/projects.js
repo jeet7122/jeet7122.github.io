@@ -69,7 +69,7 @@ export const projects = [
             "Developed Purchase & Inventory modules with supplier binding and dynamic transaction charts.",
             "Designed and enforced the development path, allocating and distributing tasks among team members."
         ],
-        "img_src": "null",
+        "img_src": "imgs/storemate_project.png",
         "role_focus": "Performance Optimization, Leadership, Full-Stack"
     },
     {
@@ -100,34 +100,7 @@ export const projects = [
             "Optimized frontend-backend communication with asynchronous API calls, reducing latency and improving user experience.",
             "Deployed backend on Render with environment-based configuration, ensuring 24x7 availability."
         ],
-        "img_src": "null",
+        "img_src": "imgs/aiass_project.png",
         "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
     },
-    {
-        "title": "DR-DESK (Clinic Management App)",
-        "stack": ["JavaFX", "PostgreSQL", "Java", "MVC"],
-        "repo": "https://github.com/jeet7122/DR-DESK",
-        "description": "Clinic management desktop application to efficiently manage patient records, appointments, medical history, billing, and visit tracking with clean UI components.",
-        "details": [
-            "Implemented structured data models using the MVC pattern for maintainability.",
-            "Developed persistent patient history and time-based reporting features.",
-            "Provided smooth session management, multi-view navigation, and user authentication.",
-            "Led the team, distributed tasks, and ensured adherence to real-world healthcare workflows."
-        ],
-        "img_src": "null",
-        "role_focus": "Leadership, Database Design, MVC Architecture"
-    },
-    {
-        "title": "JavaJacks (Blackjack Game)",
-        "stack": ["JavaFX", "Java", "File I/O"],
-        "repo": "https://github.com/starboundtd12/JavaJacks",
-        "description": "Blackjack desktop game built using JavaFX, showcasing UI state transitions, card animations, and robust game logic.",
-        "details": [
-            "Implemented a reliable turn-based card engine and dealer logic.",
-            "Developed a dynamic scoring system with smooth hand animations and deck handling.",
-            "Focused on intuitive controls and simple UI layers."
-        ],
-        "img_src": "null",
-        "role_focus": "UI/UX, Game Logic"
-    }
 ]

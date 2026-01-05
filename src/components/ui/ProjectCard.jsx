@@ -5,7 +5,7 @@ export default function ProjectCard({ project, onOpen }) {
     <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:bg-gray-850 transition">
         {project.img_src !== "null" ? (
             <div>
-                <img src={project.img_src} alt="project" />
+                <img src={project.img_src} className="h-40 rounded-lg mb-4 hover:scale-110" alt="project" />
             </div>
         ) : (<div></div>)}
       <h3 className="text-xl font-bold text-white">{project.title}</h3>

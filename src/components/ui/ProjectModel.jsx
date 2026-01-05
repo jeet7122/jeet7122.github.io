@@ -8,6 +8,10 @@ export default function ProjectModel({ project, onClose }) {
 
             <div className="bg-gray-900 border border-gray-800 rounded-lg p-6
                       w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+                {project.img_src !== "null" ? (
+                    <div>
+                        <img src={project.img_src} alt="project image" className='mb-5 h-85 rounded-lg' />
+                </div>): (<div></div>) }
 
                 <h2 className="text-2xl sm:text-3xl font-bold text-white">
                     {project.title}
