@@ -1,19 +1,30 @@
 export const projects = [
     {
-        "title": "Let_Us_Connect - Project Collaboration Hub",
-        "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Role-Based Access Control (RBAC)", "SMTP/Mailto Integration", "Database Management"],
-        "repo": "https://letusconnect-st.vercel.app",
-        "description": "A centralized networking platform designed for developers to showcase project ideas and find collaborators. The platform features a moderated submission workflow where an admin dashboard manages project visibility, ensuring high-quality content for the community of viewers.",
-        "details": [
-            "Architected a multi-role user system with dedicated views for Admins (moderation) and Viewers (collaboration).",
-            "Implemented an Admin Approval Workflow to vet project submissions, allowing for the approval or rejection of posts before they go live.",
-            "Integrated seamless collaboration triggers by mapping user profiles to direct email communication and GitHub repository links.",
-            "Designed a project showcase UI that highlights project overviews, technical goals, and development roadmaps to attract relevant contributors.",
-            "Built a responsive project discovery feed using Next.js, optimizing for fast navigation and clear calls-to-action (CTA) for collaboration.",
-            "Developed secure form handling with TypeScript to manage project metadata, including repository validation and contact information."
+        "title": "Resinique Artistry – Custom Resin Art & Jewelry Platform",
+        "stack": [
+            "Next.js (App Router)",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL + Drizzle ORM",
+            "Clerk Authentication",
+            "Server Actions & API Routes",
+            "Discord Webhooks",
+            "Responsive UI/UX Design"
         ],
-        "img_src": "imgs/ltc_project.png",
-        "role_focus": "Product Engineering, Workflow Automation, RBAC Implementation, UI/UX Design"
+        "repo": "https://resinique-artistry.shop",
+        "description": "A full-stack e-commerce and showcase platform built for a resin art brand, enabling users to explore handcrafted resin jewelry and décor while supporting made-to-order customizations such as flower preservation and personalized resin pieces.",
+        "details": [
+            "Designed and developed a modern, responsive storefront showcasing resin jewelry, frames, wall clocks, and flower preservation artworks.",
+            "Implemented product listing and detail pages using dynamic routing and server components for optimal performance and SEO.",
+            "Built a custom order workflow allowing users to submit personalized requests with descriptions, contact details, and customization ideas.",
+            "Integrated authentication using Clerk to enable user-specific interactions such as interest tracking and future order management.",
+            "Developed a scalable database schema with Drizzle ORM to manage products, images, categories, and custom order submissions.",
+            "Created skeleton loaders and smooth UI states to enhance perceived performance during data fetching.",
+            "Implemented conditional UI behavior where unauthenticated users are prompted to sign in before expressing interest or placing custom orders.",
+            "Focused on clean UI/UX with Tailwind CSS, emphasizing visual storytelling for handcrafted art products."
+        ],
+        "img_src": "imgs/resinique_project.png",
+        "role_focus": "Full-Stack Development, E-commerce Architecture, Database Design, Authentication, UI/UX Engineering"
     },
     {
         "title": "Decision_Replay_Engine - AI-Powered Decision Analysis Platform",
@@ -102,5 +113,21 @@ export const projects = [
         ],
         "img_src": "imgs/aiass_project.png",
         "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
+    },
+    {
+        "title": "Let_Us_Connect - Project Collaboration Hub",
+        "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Role-Based Access Control (RBAC)", "SMTP/Mailto Integration", "Database Management"],
+        "repo": "https://letusconnect-st.vercel.app",
+        "description": "A centralized networking platform designed for developers to showcase project ideas and find collaborators. The platform features a moderated submission workflow where an admin dashboard manages project visibility, ensuring high-quality content for the community of viewers.",
+        "details": [
+            "Architected a multi-role user system with dedicated views for Admins (moderation) and Viewers (collaboration).",
+            "Implemented an Admin Approval Workflow to vet project submissions, allowing for the approval or rejection of posts before they go live.",
+            "Integrated seamless collaboration triggers by mapping user profiles to direct email communication and GitHub repository links.",
+            "Designed a project showcase UI that highlights project overviews, technical goals, and development roadmaps to attract relevant contributors.",
+            "Built a responsive project discovery feed using Next.js, optimizing for fast navigation and clear calls-to-action (CTA) for collaboration.",
+            "Developed secure form handling with TypeScript to manage project metadata, including repository validation and contact information."
+        ],
+        "img_src": "imgs/ltc_project.png",
+        "role_focus": "Product Engineering, Workflow Automation, RBAC Implementation, UI/UX Design"
     },
 ]
