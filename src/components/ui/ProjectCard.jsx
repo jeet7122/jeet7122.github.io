@@ -36,7 +36,7 @@ export default function ProjectCard({ project, onOpen }) {
           target="_blank"
           className="px-4 py-2 rounded-md border border-gray-600 text-gray-300 hover:bg-gray-700 transition"
         >
-          Source Code
+          Source/Live
         </a>
       </div>
     </div>
