@@ -1,5 +1,37 @@
 export const projects = [
     {
+        "title": "ChopShopApp – Barbershop Booking & Management SaaS",
+        "stack": [
+            "Next.js (App Router)",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL + Drizzle ORM",
+            "Clerk Authentication",
+            "Role-Based Access Control (RBAC)",
+            "Backend-for-Frontend (BFF) Architecture",
+            "Server Actions & API Routes",
+            "Real-Time UI States & Animations"
+        ],
+        "repo": "https://chopshop-barbershop-webapp.vercel.app",
+        "description": "A full-stack SaaS platform built with a Backend-for-Frontend (BFF) architecture for barbershops to manage online bookings, staff schedules, and customer appointments through role-based dashboards for admins, barbers, and clients. The system centralizes business operations, reduces no-shows, and delivers a fast, secure, and tailored user experience for each role.",
+        "details": [
+            "Designed and developed a role-based multi-tenant platform using a Backend-for-Frontend (BFF) pattern, tailoring server logic and data shaping specifically for Admin, Barber, and Customer interfaces.",
+            "Implemented an online appointment booking system with real-time availability, service selection, and automated schedule management.",
+            "Built an admin dashboard to manage barbers, approve staff accounts, configure services, and oversee all appointments in one place.",
+            "Created a barber dashboard to view daily schedules, manage availability, and track upcoming client appointments.",
+            "Developed customer-facing flows for browsing services, booking appointments, and viewing personal appointment history.",
+            "Integrated Clerk authentication with role-based access control to enforce permissions and protect sensitive operations.",
+            "Designed a scalable relational database schema using Drizzle ORM to handle users, roles, services, schedules, and bookings.",
+            "Used Next.js Server Actions and API Routes as the BFF layer to orchestrate data access, validation, and business logic.",
+            "Implemented responsive UI/UX with Tailwind CSS optimized for mobile, tablet, and desktop devices used in physical shops.",
+            "Added loading skeletons, optimistic UI updates, and animated transitions to enhance perceived performance and usability.",
+            "Focused on building a production-ready system with clean architecture, modular components, and future extensibility for multi-location support."
+        ],
+        "img_src": "imgs/chopshopapp.png",
+        "role_focus": "Full-Stack SaaS Development, Backend-for-Frontend Architecture, System Design, Database Modeling, Role-Based Security, UI/UX Engineering"
+    }
+    ,
+    {
         "title": "Resinique Artistry – Custom Resin Art & Jewelry Platform",
         "stack": [
             "Next.js (App Router)",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./components/Header";
 import HomeHero from "./components/Hero";
 import ContentSection from "./components/layout/ContentSection";
@@ -9,6 +9,8 @@ import AnimatedSection from "./utils/AnimatedSection.jsx";
 import {AnimatedText} from "./utils/AnimatedText.jsx";
 
 export default function App() {
+    const [step, setStep] = useState(0);
+
     return (
         <div className="min-h-screen">
             <Header/>
@@ -18,7 +20,11 @@ export default function App() {
                     <ContentSection id="about" title="About Me" className="bg-gray-900">
                         <div className="max-w-6xl text-gray-300 space-y-6 text-lg leading-relaxed">
                             <p>
-                                <AnimatedText delay={0.2}>
+                                <AnimatedText
+                                    isVisible={step >= 0}
+                                    isActive={step === 0}
+                                    onComplete={() => setStep(1)}
+                                >
                                     I am a software developer with a passion for building clean,
                                     practical, and user-focused solutions.<span> I specialize in full-stack
                                     development</span>, creating intuitive interfaces with technologies like{" "}
@@ -32,7 +38,9 @@ export default function App() {
                             </p>
 
                             <p>
-                                <AnimatedText delay={0.4}>
+                                <AnimatedText isVisible={step >= 1}
+                                              isActive={step === 1}
+                                              onComplete={() => setStep(2)}>
                                     I enjoy transforming real-world problems into functional
                                     applications. Whether it’s a point-of-sale interface built with{" "}
                                     <span className="text-blue-300">JavaFX</span> or a data dashboard
@@ -42,7 +50,7 @@ export default function App() {
                             </p>
 
                             <p>
-                                <AnimatedText delay={0.6}>
+                                <AnimatedText isVisible={step >= 2} isActive={step === 2}>
                                     Beyond code, I have a strong foundation in system architecture,
                                     UI/UX thinking, and building projects with real business value. I'm
                                     constantly exploring modern tools—design patterns, component

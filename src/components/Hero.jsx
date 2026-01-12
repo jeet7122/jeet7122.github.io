@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Zap, ArrowRight, CornerRightUp } from "lucide-react";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
+import {ProfileAvatar} from "./ProfileAvatar.jsx";
 
 const heroSkills = [
     { name: "React", color: "text-blue-400", icon: <Icon icon="logos:react" /> },
@@ -154,28 +155,18 @@ export default function HomeHero() {
               </span>
                         </div>
                     </div>
-
                     {/* RIGHT */}
                     <div className="lg:col-span-4 flex justify-center lg:justify-end">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.96 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.2, duration: 0.6 }}
-                            className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-indigo-900/50 p-2 border-4 border-indigo-500/50 shadow-[0_0_40px_rgba(99,102,241,0.5)]"
+                            transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+                            className="relative"
                         >
-                            <img
-                                src="imgs/profile.jpg"
-                                alt="Profile"
-                                className="object-contain w-full h-full rounded-full"
-                                onError={(e) => {
-                                    e.target.onerror = null;
-                                    e.target.src =
-                                        "https://placehold.co/320x320/2563eb/ffffff?text=Profile+Photo";
-                                }}
-                            />
-                            <div className="absolute inset-0 rounded-full border-4 border-dashed border-indigo-400 opacity-30 animate-spin-slow" />
+                            <ProfileAvatar src="imgs/profile.jpg" alt="Jeet Thakkar" initials="JT" />
                         </motion.div>
                     </div>
+
                 </div>
             </motion.div>
         </section>
