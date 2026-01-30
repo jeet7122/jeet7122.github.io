@@ -1,7 +1,4 @@
 @import "tailwindcss";
-html { 
-  scroll-behavior: smooth;
- }
 
 
 /* small helpers used by the hero */
@@ -11,5 +8,80 @@ html {
 .animate-spin-slow { animation: spin-slow 15s linear infinite; }
 
 
+
 /* optional: tweak container max width */
 .container { max-width: 1200px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+
+:root{
+    /* Backgrounds */
+    --bg-main: #F6F1E8;
+    --bg-section: #FBF6EE;
+
+    /* Text */
+    --text-h1: #2B1F1A;
+    --text-h2: #3A2A23;
+    --text-h3: #4A3A33;
+    --text-body: #5B4A42;
+    --text-muted: #7A6A61;
+
+    /* Cards */
+    --card-bg: #FFF9F1;
+    --card-border: #E7DACB;
+
+    /* Buttons */
+    --btn-primary: #C07A3A;
+    --btn-primary-hover: #A8642F;
+    --btn-secondary: #C07A3A;
+
+    /* Links */
+    --link: #6E8B74;
+    --link-hover: #58725E;
+
+    /* Borders */
+    --border-light: #E7DACB;
+    --border-strong: #D6C4B2;
+
+    /** Accent Colors */
+    --accent: #C07A3A;      /* caramel */
+    --accent-2: #6E8B74;
+}
+html{
+    scroll-behavior: smooth;
+    transition: ease-in 0.9s;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-body);
+}
+
+section:nth-child(even){
+    background: var(--bg-section);
+}
+
+h1{ color: var(--text-h1); }
+h2{ color: var(--text-h2); }
+h3{ color: var(--text-h3); }
+
+p{ color: var(--text-body); }
+
+a{
+    text-decoration: none;
+}
+
+.btn-primary{
+    background: var(--btn-primary);
+    color: white;
+}
+.btn-primary:hover{
+    background: var(--btn-primary-hover);
+}
+.card{
+    background: var(--card-bg);
+    color: var(--text-body);
+    border-color: var(--card-border);
+}
+
+.bg-secondary{
+    background: var(--bg-section);
+}

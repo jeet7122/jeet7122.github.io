@@ -6,7 +6,7 @@ export default function ProjectModel({ project, onClose }) {
                     flex items-start sm:items-center justify-center
                     overflow-y-auto p-4">
 
-            <div className="bg-gray-900 border border-gray-800 rounded-lg p-6
+            <div className="bg-secondary border border-gray-800 rounded-lg p-6
                       w-full max-w-3xl max-h-[90vh] overflow-y-auto">
                 {project.img_src !== "null" ? (
                     <div>

@@ -7,17 +7,19 @@ import ExperienceSection from "./components/sections/ExperienceSection";
 import {Github, GithubIcon, Linkedin, Mail} from "lucide-react";
 import AnimatedSection from "./utils/AnimatedSection.jsx";
 import {AnimatedText} from "./utils/AnimatedText.jsx";
+import CoffeeBackground from "./components/CoffeeBackground.jsx";
 
 export default function App() {
     const [step, setStep] = useState(0);
 
     return (
         <div className="min-h-screen">
+            <CoffeeBackground withSteam />
             <Header/>
             <main>
                 <HomeHero/>
                 <AnimatedSection>
-                    <ContentSection id="about" title="About Me" className="bg-gray-900">
+                    <ContentSection id="about" title="About Me" className="section">
                         <div className="max-w-6xl text-gray-300 space-y-6 text-lg leading-relaxed">
                             <p>
                                 <AnimatedText
@@ -72,7 +74,7 @@ export default function App() {
                 <ContentSection
                     id="contact"
                     title="Get in Touch"
-                    className="bg-gray-950 text-gray-300">
+                    className= "text-gray-300">
                     <div className="max-w-lg mx-auto space-y-4 text-gray-300">
                         <p className="font-sans font-semibold text-lg leading-relaxed tracking-wide text-gray-100">
                             I'm always <span className="text-blue-400">excited to connect</span> with
@@ -97,7 +99,7 @@ export default function App() {
 
             </main>
 
-            <footer className="bg-gray-950 border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+            <footer className="border-t border-gray-800 py-8 text-center text-sm text-gray-500">
                 <div className="flex justify-center gap-6 mb-4">
                     <a
                         href="https://github.com/jeet7122"

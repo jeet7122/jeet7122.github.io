@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-950/95 backdrop-blur-sm border-b border-gray-800 shadow-xl">
+    <header className="sticky top-0 z-50 bg-muted backdrop-blur-sm border-b border-gray-800 shadow-xl">
       <div className="container flex justify-between items-center h-20">
         <a
           href="#home"
@@ -28,7 +28,7 @@ export default function Header() {
           className="text-2xl font-bold tracking-tight text-indigo-400 flex items-center group"
         >
           <span className="text-3xl mr-1">J</span>
-          <span className="text-white group-hover:text-indigo-300 transition-colors duration-300">
+          <span className="group-hover:text-indigo-300 transition-colors duration-300">
             Thakkar.
           </span>
         </a>
@@ -39,7 +39,7 @@ export default function Header() {
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-gray-300 hover:text-indigo-400 transition duration-150 ease-in-out font-medium relative group"
+              className="text-lime-900 hover:text-indigo-400 transition duration-150 ease-in-out font-medium relative group"
             >
               {link.name}
               <span className="absolute left-0 bottom[-4px] w-full h-0.5 bg-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>

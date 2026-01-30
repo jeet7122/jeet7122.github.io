@@ -2,13 +2,13 @@
 
 export default function ProjectCard({ project, onOpen }) {
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:bg-gray-850 transition">
+    <div className="card rounded-lg p-6 transition">
         {project.img_src !== "null" ? (
             <div>
                 <img src={project.img_src} className="h-40 rounded-lg mb-4 hover:scale-110" alt="project" />
             </div>
         ) : (<div></div>)}
-      <h3 className="text-xl font-bold text-white">{project.title}</h3>
+      <h3 className="text-xl font-bold font-sans">{project.title}</h3>
       <p className="text-sm text-blue-400 mt-1">{project.type}</p>
 
       <p className="text-gray-400 mt-3 line-clamp-3">{project.description}</p>

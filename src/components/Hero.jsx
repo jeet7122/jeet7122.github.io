@@ -55,7 +55,7 @@ export default function HomeHero() {
     };
 
     return (
-        <section id="home" className="pt-24 min-h-screen flex items-center bg-gray-950">
+        <section id="home" className="pt-24 min-h-screen flex items-center bg-background">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ export default function HomeHero() {
                                 onClick={(e) => scrollToSection(e, "#contact")}
                                 whileHover={{ scale: 1.04 }}
                                 whileTap={{ scale: 0.96 }}
-                                className="inline-flex items-center justify-center px-8 py-3 rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50"
+                                className="text-white/70 inline-flex items-center justify-center px-8 py-3 rounded-xl shadow-lg btn-primary focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50"
                             >
                                 Hire Me!
                                 <CornerRightUp className="ml-2 w-4 h-4" />
@@ -125,7 +125,7 @@ export default function HomeHero() {
                                 onClick={(e) => scrollToSection(e, "#contact")}
                                 whileHover={{ scale: 1.04 }}
                                 whileTap={{ scale: 0.96 }}
-                                className="inline-flex items-center justify-center px-8 py-3 rounded-xl border border-indigo-400 text-indigo-400 hover:bg-indigo-900 focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-50"
+                                className="inline-flex items-center justify-center px-8 py-3 rounded-xl border border-indigo-400 text-indigo-400 hover:bg-indigo-900 hover:text-white focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-50"
                             >
                                 Available for collaborations
                                 <ArrowRight className="ml-2 w-4 h-4" />

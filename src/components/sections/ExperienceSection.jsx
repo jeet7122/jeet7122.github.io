@@ -8,7 +8,7 @@ export default function ExperienceSection() {
         <ContentSection
             id="experience"
             title="Experience & Education"
-            className="bg-gray-900 py-24"
+            className="py-24"
         >
             <div className="mt-12">
                 <ExperienceTimeline items={experience} />
