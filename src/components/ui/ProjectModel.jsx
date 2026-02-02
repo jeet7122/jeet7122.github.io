@@ -19,9 +19,9 @@ export default function ProjectModel({ project, onClose }) {
 
                 <p className="text-sm text-blue-400 mt-1">{project.type}</p>
 
-                <p className="text-gray-400 mt-4">{project.description}</p>
+                <p className="text-gray-900 mt-4">{project.description}</p>
 
-                <ul className="mt-6 text-gray-300 space-y-2 list-disc list-inside">
+                <ul className="mt-6 text-red-900 space-y-2 list-disc list-inside">
                     {project.details.map((d) => (
                         <li key={d}>{d}</li>
                     ))}

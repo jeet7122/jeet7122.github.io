@@ -105,7 +105,7 @@ export default function App() {
                         href="https://github.com/jeet7122"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-gray-400 hover:text-red-900 transition-colors"
                     >
                         <Github size={24}/>
                     </a>

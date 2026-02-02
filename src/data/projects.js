@@ -1,5 +1,37 @@
 export const projects = [
     {
+        "title": "ModuPro – Multi-Tenant Store Management SaaS",
+        "stack": [
+            "Next.js (App Router)",
+            "TypeScript",
+            "Tailwind CSS",
+            "PostgreSQL + Drizzle ORM",
+            "Clerk Authentication",
+            "Multi-Tenant Architecture",
+            "Role-Based Access Control (RBAC)",
+            "Backend-for-Frontend (BFF) Architecture",
+            "Server Actions & API Routes",
+            "Scalable Modular Design"
+        ],
+        "repo": "https://modu-pro-5nl3.vercel.app",
+        "description": "ModuPro is a multi-tenant SaaS platform that allows stores and businesses to self-register and manage their operations through isolated, role-based dashboards. Built with a Backend-for-Frontend (BFF) architecture, the platform ensures secure tenant isolation, scalable data modeling, and a highly customizable foundation for growing businesses.",
+        "details": [
+            "Designed and implemented a multi-tenant SaaS architecture where each store can self-register and operate in an isolated tenant environment.",
+            "Built a secure onboarding flow allowing businesses to create their own workspace with automated tenant provisioning.",
+            "Implemented role-based access control (RBAC) to support Admin, Staff, and User roles within each tenant.",
+            "Used a Backend-for-Frontend (BFF) pattern to tailor server-side logic and data responses per role and tenant.",
+            "Developed tenant-aware database schemas using Drizzle ORM to ensure strict data isolation across stores.",
+            "Integrated Clerk authentication with custom role and tenant context enforcement.",
+            "Created admin dashboards for store owners to manage users, roles, settings, and business modules.",
+            "Designed modular system components to enable future feature expansion without impacting existing tenants.",
+            "Implemented protected routes and server actions to prevent cross-tenant data access.",
+            "Focused on scalability, maintainability, and clean architecture suitable for production-grade SaaS systems.",
+            "Optimized UI with Tailwind CSS for responsiveness and consistency across tenant dashboards."
+        ],
+        "img_src": "imgs/modu_pro.png",
+        "role_focus": "Full-Stack SaaS Development, Multi-Tenant System Design, Backend-for-Frontend Architecture, Database Modeling, Security & Access Control"
+    },
+    {
         "title": "ChopShopApp – Barbershop Booking & Management SaaS",
         "stack": [
             "Next.js (App Router)",

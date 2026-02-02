@@ -28,7 +28,7 @@ export default function Header() {
           className="text-2xl font-bold tracking-tight text-indigo-400 flex items-center group"
         >
           <span className="text-3xl mr-1">J</span>
-          <span className="group-hover:text-indigo-300 transition-colors duration-300">
+          <span className="group-hover:text-indigo-400 transition-colors duration-300 text-red-900">
             Thakkar.
           </span>
         </a>

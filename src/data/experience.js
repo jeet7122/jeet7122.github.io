@@ -2,7 +2,7 @@ export const experience = [
   {
     title: "St. Clair College — Software Development",
     type: "Education",
-    period: "2024 — Present",
+    period: "2024 — 2026",
     description:
       "Post-secondary studies with emphasis on Java development, database programming, object-oriented systems, and full-stack engineering.",
     highlights: [

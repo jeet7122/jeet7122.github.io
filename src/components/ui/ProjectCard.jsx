@@ -11,7 +11,7 @@ export default function ProjectCard({ project, onOpen }) {
       <h3 className="text-xl font-bold font-sans">{project.title}</h3>
       <p className="text-sm text-blue-400 mt-1">{project.type}</p>
 
-      <p className="text-gray-400 mt-3 line-clamp-3">{project.description}</p>
+      <p className="text-red-900 mt-3 line-clamp-3">{project.description}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         {project.stack.map((tag) => (

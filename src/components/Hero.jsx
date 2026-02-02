@@ -156,7 +156,7 @@ export default function HomeHero() {
                         </div>
                     </div>
                     {/* RIGHT */}
-                    <div className="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div className="lg:col-span-4 flex justify-center lg:justify-end mb-20">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.96 }}
                             animate={{ opacity: 1, scale: 1 }}
