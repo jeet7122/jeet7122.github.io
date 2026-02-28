@@ -8,6 +8,7 @@ import {Github, GithubIcon, Linkedin, Mail} from "lucide-react";
 import AnimatedSection from "./utils/AnimatedSection.jsx";
 import {AnimatedText} from "./utils/AnimatedText.jsx";
 import CoffeeBackground from "./components/CoffeeBackground.jsx";
+import ContactForm from "./components/sections/ContactForm.jsx";
 
 export default function App() {
     const [step, setStep] = useState(0);
@@ -27,15 +28,12 @@ export default function App() {
                                     isActive={step === 0}
                                     onComplete={() => setStep(1)}
                                 >
-                                    I am a software developer with a passion for building clean,
-                                    practical, and user-focused solutions.<span> I specialize in full-stack
-                                    development</span>, creating intuitive interfaces with technologies like{" "}
-                                    <span className="text-blue-400">React, </span>
-                                    <span className="text-amber-400/70">Next.js </span>and
-                                    <span className="text-cyan-300"> Tailwind CSS</span>, while
-                                    delivering scalable backend systems using{" "}
-                                    <span className="text-orange-400">Java</span> and{" "}
-                                    <span className="text-green-400">Node.js</span>.
+                                    I am a backend-focused software engineer passionate about building scalable,
+                                    reliable systems that solve real-world problems. While I enjoy working across
+                                    the stack, my core focus is on backend engineering—designing clean APIs,
+                                    asynchronous workflows, and maintainable architectures. I build modern interfaces
+                                    with React, Next.js and Tailwind CSS, while developing
+                                    scalable backend services using Java, Spring Boot, and Node.js.
                                 </AnimatedText>
                             </p>
 
@@ -43,21 +41,18 @@ export default function App() {
                                 <AnimatedText isVisible={step >= 1}
                                               isActive={step === 1}
                                               onComplete={() => setStep(2)}>
-                                    I enjoy transforming real-world problems into functional
-                                    applications. Whether it’s a point-of-sale interface built with{" "}
-                                    <span className="text-blue-300">JavaFX</span> or a data dashboard
-                                    powered by <span className="text-yellow-400">MySQL</span>, I focus
-                                    on performance, maintainability, and long-term usability.
+                                    I enjoy designing systems that handle real workloads from backend automation
+                                    workflows to distributed job processing and data-driven applications. Whether
+                                    building internal tools or production-facing systems, I focus on performance,
+                                    reliability, and clean separation of responsibilities across services.
                                 </AnimatedText>
                             </p>
 
                             <p>
                                 <AnimatedText isVisible={step >= 2} isActive={step === 2}>
-                                    Beyond code, I have a strong foundation in system architecture,
-                                    UI/UX thinking, and building projects with real business value. I'm
-                                    constantly exploring modern tools—design patterns, component
-                                    libraries, data visualization, and deployment strategies—to refine
-                                    my craft and deliver products that make a difference.
+                                    Beyond coding, I am deeply interested in backend architecture, scalability
+                                    patterns, and building software with long-term maintainability in mind.I continuously explore system design concepts, asynchronous processing,
+                                    and modern engineering practices to build solutions that are dependable and easy to evolve.
                                 </AnimatedText>
                             </p>
                         </div>
@@ -74,28 +69,45 @@ export default function App() {
                 <ContentSection
                     id="contact"
                     title="Get in Touch"
-                    className= "text-gray-300">
-                    <div className="max-w-lg mx-auto space-y-4 text-gray-300">
-                        <p className="font-sans font-semibold text-lg leading-relaxed tracking-wide text-gray-100">
-                            I'm always <span className="text-blue-400">excited to connect</span> with
-                            <span className="text-pink-400"> like-minded professionals</span>, explore
-                            <span className="text-purple-400"> potential collaborations</span>, or discuss
-                            <span className="text-green-400"> opportunities</span> that align with my skills and
-                            interests.
-                            Whether you have a <span className="text-yellow-400">project in mind</span>, a
-                            <span className="text-red-400"> role to discuss</span>, or just want to say
-                            <span className="text-teal-400"> hello</span>, feel free to reach out—I’d love to hear from
-                            you!
-                        </p>
-                        <a
-                            href="mailto:jeetthakkar2612@gmail.com"
-                            className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors"
-                        >
-                            Connect
-                        </a>
+                    className="text-gray-300 bg-green-500/20"
+                >
+                    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+
+                            {/* Left: Text */}
+                            <div className="space-y-4 lg:mt-10">
+                                <p className="font-sans font-semibold text-lg leading-relaxed text-gray-100 max-w-xl">
+                                    I'm always <span className="text-blue-600">excited to connect</span> with
+                                    <span className="text-pink-900"> like-minded professionals</span>, explore
+                                    <span className="text-purple-900"> potential collaborations</span>, or discuss
+                                    <span className="text-green-700"> opportunities</span> that align with my skills and
+                                    interests. Whether you have a <span className="text-yellow-700">project in mind</span>, a
+                                    <span className="text-red-600"> role to discuss</span>, or just want to say
+                                    <span className="text-teal-700"> hello</span>, feel free to reach out - I’d love to hear from you!
+                                </p>
+
+                                {/* Optional: small bullet highlights (makes it look premium) */}
+                                <div className="text-sm text-gray-900/80 space-y-2">
+                                    <div className="flex items-center gap-2">
+                                        <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                                        Usually replies within 24 hours
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="h-2 w-2 rounded-full bg-blue-400" />
+                                        Open to backend / platform roles & collaborations
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right: Form */}
+                            <div className="w-full lg:flex lg:justify-end">
+                                <div className="w-full max-w-xl">
+                                    <ContactForm />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </ContentSection>
-
 
             </main>
 

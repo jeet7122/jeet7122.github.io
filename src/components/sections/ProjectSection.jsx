@@ -48,7 +48,7 @@ export default function ProjectsSection() {
     };
 
     return (
-        <ContentSection id="projects" title="Shipped Projects" className="bg-background">
+        <ContentSection id="projects" title="Shipped Projects" className="bg-green-500/20">
             <div ref={containerRef} className="w-full">
                 <motion.div
                     ref={inViewRef}
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
                     animate={inView ? "visible" : "hidden"}
                     className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10"
                 >
-                    {projects.map((p, index) => (
+                    {projects.map((p) => (
                         <motion.div
                             key={p.title}
                             variants={cardVariants}

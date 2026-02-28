@@ -20,7 +20,7 @@ export function ProfileAvatar({ src, alt, initials = "JT" }) {
                         <img
                             src={src}
                             alt={alt}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-cover"
                             loading="eager"
                             onError={() => setFailed(true)}
                         />

@@ -163,7 +163,7 @@ export default function HomeHero() {
                             transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
                             className="relative"
                         >
-                            <ProfileAvatar src="imgs/profile.jpg" alt="Jeet Thakkar" initials="JT" />
+                            <ProfileAvatar src="imgs/jeet.png" alt="Jeet Thakkar" initials="JT" />
                         </motion.div>
                     </div>
 

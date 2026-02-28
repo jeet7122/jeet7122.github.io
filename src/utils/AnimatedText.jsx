@@ -9,8 +9,8 @@ export function AnimatedText({
                                  isVisible = true,   // show/hide
                                  isActive = false,   // animate now?
                                  onComplete,
-                                 stagger = 0.02,
-                                 letterDuration = 0.12,
+                                 stagger = 0.01,
+                                 letterDuration = 0.06,
                              }) {
     const text =
         typeof children === "string"

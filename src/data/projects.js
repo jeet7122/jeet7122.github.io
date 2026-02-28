@@ -32,37 +32,67 @@ export const projects = [
         "role_focus": "Full-Stack SaaS Development, Multi-Tenant System Design, Backend-for-Frontend Architecture, Database Modeling, Security & Access Control"
     },
     {
-        "title": "ChopShopApp – Barbershop Booking & Management SaaS",
+        "title": "JobFlow – Distributed Job Processing & Workflow Engine",
         "stack": [
-            "Next.js (App Router)",
+            "Java",
+            "Spring Boot",
+            "PostgreSQL",
+            "Redis",
+            "REST APIs",
+            "Distributed Locking",
+            "Worker Queue Architecture",
+            "Event-Driven Design",
+            "Concurrency Control",
+            "Microservice-Oriented Design"
+        ],
+        "repo": "https://github.com/jeet7122/job-flow",
+        "description": "JobFlow is a backend-focused distributed job processing engine designed to handle asynchronous workflows using worker-based execution. The system supports reliable task scheduling, concurrency-safe processing, and scalable background job execution, making it suitable for real-world enterprise workloads.",
+        "details": [
+            "Designed and implemented a distributed job processing architecture using workers that consume tasks asynchronously from a queue.",
+            "Implemented concurrency-safe job execution using distributed locking mechanisms to prevent duplicate processing.",
+            "Built REST APIs for job creation, tracking, and lifecycle management.",
+            "Developed worker polling logic capable of handling parallel execution across multiple instances.",
+            "Used Redis for caching, locking, and fast state coordination between workers.",
+            "Implemented retry strategies and failure-safe execution flow for resilient background processing.",
+            "Designed scalable database schemas for job states, execution metadata, and processing history.",
+            "Focused on clean layered architecture and separation of concerns for maintainability and scalability.",
+            "Applied event-driven thinking to decouple job producers from processing workers.",
+            "Optimized system for extensibility so new job types can be added with minimal changes."
+        ],
+        "img_src": "imgs/job-flow.png",
+        "role_focus": "Backend System Design, Distributed Processing, Concurrency Control, Queue-Based Architecture, Scalable Spring Boot Development"
+    },
+    {
+        "title": "Jessica's WebApp – Client-Focused Business Platform",
+        "stack": [
+            "Next.js",
+            "React",
             "TypeScript",
             "Tailwind CSS",
-            "PostgreSQL + Drizzle ORM",
-            "Clerk Authentication",
-            "Role-Based Access Control (RBAC)",
-            "Backend-for-Frontend (BFF) Architecture",
-            "Server Actions & API Routes",
-            "Real-Time UI States & Animations"
+            "Spring Boot",
+            "PostgreSQL",
+            "Authentication & Authorization",
+            "CMS Architecture",
+            "Admin Dashboard",
+            "Responsive Web Design"
         ],
-        "repo": "https://chopshop-barbershop-webapp.vercel.app",
-        "description": "A full-stack SaaS platform built with a Backend-for-Frontend (BFF) architecture for barbershops to manage online bookings, staff schedules, and customer appointments through role-based dashboards for admins, barbers, and clients. The system centralizes business operations, reduces no-shows, and delivers a fast, secure, and tailored user experience for each role.",
+        "repo": "https://github.com/jeet7122/client-project-development-repo",
+        "description": "Jessica’s WebApp is a real-client business platform built to manage content, user interactions, and business operations through a scalable full-stack architecture. The project combines frontend usability with backend extensibility, featuring admin-level controls and production-oriented design decisions.",
         "details": [
-            "Designed and developed a role-based multi-tenant platform using a Backend-for-Frontend (BFF) pattern, tailoring server logic and data shaping specifically for Admin, Barber, and Customer interfaces.",
-            "Implemented an online appointment booking system with real-time availability, service selection, and automated schedule management.",
-            "Built an admin dashboard to manage barbers, approve staff accounts, configure services, and oversee all appointments in one place.",
-            "Created a barber dashboard to view daily schedules, manage availability, and track upcoming client appointments.",
-            "Developed customer-facing flows for browsing services, booking appointments, and viewing personal appointment history.",
-            "Integrated Clerk authentication with role-based access control to enforce permissions and protect sensitive operations.",
-            "Designed a scalable relational database schema using Drizzle ORM to handle users, roles, services, schedules, and bookings.",
-            "Used Next.js Server Actions and API Routes as the BFF layer to orchestrate data access, validation, and business logic.",
-            "Implemented responsive UI/UX with Tailwind CSS optimized for mobile, tablet, and desktop devices used in physical shops.",
-            "Added loading skeletons, optimistic UI updates, and animated transitions to enhance perceived performance and usability.",
-            "Focused on building a production-ready system with clean architecture, modular components, and future extensibility for multi-location support."
+            "Developed a full-stack client-facing web application tailored to real business requirements and workflows.",
+            "Built a responsive frontend using Next.js and Tailwind CSS focused on clean UX and professional branding.",
+            "Implemented secure authentication and role-based access for admin and client operations.",
+            "Designed and developed an admin dashboard for managing content, business data, and platform settings.",
+            "Structured backend APIs using Spring Boot following clean architecture principles.",
+            "Created CMS-like functionality allowing dynamic updates without redeployment.",
+            "Integrated form handling and backend validation for reliable user submissions.",
+            "Ensured scalability by separating presentation, business logic, and data layers.",
+            "Focused on production-ready code quality, maintainability, and future extensibility.",
+            "Collaborated with real client requirements to deliver practical, business-driven features."
         ],
-        "img_src": "imgs/chopshopapp.png",
-        "role_focus": "Full-Stack SaaS Development, Backend-for-Frontend Architecture, System Design, Database Modeling, Role-Based Security, UI/UX Engineering"
-    }
-    ,
+        "img_src": "imgs/jessica_webapp.png",
+        "role_focus": "Full-Stack Development, Client Project Delivery, Backend API Design, Admin Panel Development, Scalable Architecture"
+    },
     {
         "title": "Resinique Artistry – Custom Resin Art & Jewelry Platform",
         "stack": [
