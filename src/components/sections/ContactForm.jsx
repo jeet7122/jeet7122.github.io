@@ -304,7 +304,7 @@ function Banner({ tone, text }) {
         "rounded-xl px-4 py-3 text-sm border backdrop-blur";
     const styles =
         tone === "success"
-            ? "bg-emerald-500/10 border-emerald-400/30 text-emerald-200"
+            ? "bg-emerald-500/10 border-emerald-400/30 text-green-400"
             : "bg-red-500/10 border-red-400/30 text-red-200";
 
     return (
