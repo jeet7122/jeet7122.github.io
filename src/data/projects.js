@@ -63,6 +63,37 @@ export const projects = [
         "role_focus": "Backend System Design, Distributed Processing, Concurrency Control, Queue-Based Architecture, Scalable Spring Boot Development"
     },
     {
+        "title": "API Gateway – Redis Token Bucket Rate Limiting Infrastructure",
+        "stack": [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JWT Authentication",
+            "Redis",
+            "Token Bucket Rate Limiting",
+            "Distributed Systems",
+            "Docker",
+            "REST APIs",
+            "Gateway Middleware Architecture"
+        ],
+        "repo": "https://github.com/jeet7122/api-gateway-with-limiter",
+        "description": "A backend infrastructure project implementing a lightweight API Gateway with JWT authentication and Redis-backed token bucket rate limiting. The system demonstrates distributed traffic control, gateway middleware design, and scalable request management patterns used in production backend platforms.",
+        "details": [
+            "Designed and implemented an API Gateway architecture using Spring Boot to centralize authentication, request filtering, and traffic control.",
+            "Built a Redis-backed token bucket rate limiting system to protect APIs from abuse and regulate request throughput.",
+            "Implemented user-based rate limiting with IP fallback to ensure fair usage across authenticated and anonymous clients.",
+            "Developed a JWT authentication filter integrated with Spring Security to validate tokens and secure protected endpoints.",
+            "Designed a filter-chain request pipeline to enforce security and traffic policies before requests reach application logic.",
+            "Stored token bucket state in Redis using distributed data structures to support consistent throttling across multiple gateway instances.",
+            "Implemented structured API error responses for rate limit violations and authentication failures.",
+            "Exposed monitoring endpoints to inspect rate limit state including remaining tokens and refill configuration.",
+            "Dockerized the application with Docker Compose to run the API gateway alongside Redis in an isolated container environment.",
+            "Applied modular architecture and separation of concerns for maintainability and extensibility."
+        ],
+        "img_src": "imgs/api_gateway_project.png",
+        "role_focus": "Backend Infrastructure Engineering, Distributed Rate Limiting, API Gateway Architecture, Redis Integration, Security & Traffic Control"
+    },
+    {
         "title": "Jessica's WebApp – Client-Focused Business Platform",
         "stack": [
             "Next.js",

@@ -103,10 +103,10 @@ export default function ContactForm() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
-            <div className="rounded-2xl border border-white/10 bg-background backdrop-blur p-5 sm:p-7 shadow-lg">
+            <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 sm:p-7 shadow-lg hover:border-emerald-400/30 transition">
                 <div className="flex items-start justify-between gap-4">
                     <div>
-                        <h2 className="text-xl sm:text-2xl font-semibold text-red-800/70">
+                        <h2 className="text-xl sm:text-2xl font-semibold text-white">
                             Contact Me
                         </h2>
                         <p className="mt-1 text-sm text-white/70">
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
                     {/* Message */}
                     <div>
-                        <label className="text-sm text-red-800/80">Message</label>
+                        <label className="text-sm text-gray-200">Message</label>
                         <motion.div
                             className={[
                                 "mt-2 rounded-xl border bg-black/20",
@@ -175,7 +175,7 @@ export default function ContactForm() {
                             transition={{ duration: 0.15 }}
                         >
               <textarea
-                  className="w-full min-h-[140px] resize-y bg-transparent px-4 py-3 text-white outline-none placeholder:text-white/40"
+                  className="w-full min-h-[140px] resize-y bg-transparent px-4 py-3 text-white outline-none placeholder:text-gray-200 bg-white/5"
                   value={form.message}
                   onChange={onChange("message")}
                   onBlur={onBlur("message")}
@@ -225,8 +225,8 @@ export default function ContactForm() {
                                 "inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-medium",
                                 "transition border",
                                 canSubmit
-                                    ? "bg-green-500/50 text-black border-white/10"
-                                    : "bg-red-900 text-white/60 border-white/10 cursor-not-allowed",
+                                    ? "bg-emerald-500 hover:bg-emerald-400 text-black border-white/10"
+                                    : "bg-gray-700 text-white/60 border-white/10 cursor-not-allowed",
                             ].join(" ")}
                             whileHover={canSubmit ? { y: -1 } : {}}
                             whileTap={canSubmit ? { scale: 0.98 } : {}}
@@ -241,8 +241,8 @@ export default function ContactForm() {
                             )}
                         </motion.button>
 
-                        <p className="text-xs text-white/50">
-                            Or email: <span className="text-red-800/70">jeetthakkar2612@gmail.com</span>
+                        <p className="text-xs text-emerald-500">
+                            Or email: <span className="text-emerald-300">jeetthakkar2612@gmail.com</span>
                         </p>
                     </div>
                 </form>
@@ -263,7 +263,7 @@ function Field({
                }) {
     return (
         <div>
-            <label className="text-sm text-red-800/80">{label}</label>
+            <label className="text-sm text-gray-200">{label}</label>
             <motion.div
                 className={[
                     "mt-2 rounded-xl border bg-black/20",
@@ -273,7 +273,7 @@ function Field({
                 transition={{ duration: 0.15 }}
             >
                 <input
-                    className="w-full bg-transparent px-4 py-3 text-white outline-none placeholder:text-white/40"
+                    className="w-full bg-transparent px-4 py-3 text-white outline-none placeholder:text-gray-200 bg-white/5"
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}

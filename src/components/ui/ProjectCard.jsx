@@ -1,44 +1,63 @@
-// src/components/ui/ProjectCard.jsx
-
 export default function ProjectCard({ project, onOpen }) {
-  return (
-    <div className="card rounded-lg p-6 transition">
-        {project.img_src !== "null" ? (
-            <div>
-                <img src={project.img_src} className="h-40 rounded-lg mb-4 hover:scale-110 w-full" alt="project" />
-            </div>
-        ) : (<div></div>)}
-      <h3 className="text-xl font-bold font-sans">{project.title}</h3>
-      <p className="text-sm text-blue-400 mt-1">{project.type}</p>
+    const primaryFocus = project.role_focus?.split(",")[0]?.trim();
+    const topHighlights = project.stack?.slice(0, 3) || [];
 
-      <p className="text-red-900 mt-3 line-clamp-3">{project.description}</p>
+    return (
+        <div className="card rounded-xl p-5 border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-400/30 h-full flex flex-col">
+            {project.img_src !== "null" && (
+                <div className="overflow-hidden rounded-lg mb-4">
+                    <img
+                        src={project.img_src}
+                        className="h-44 w-full object-cover transition-transform duration-500 hover:scale-105"
+                        alt={project.title}
+                    />
+                </div>
+            )}
 
-      <div className="mt-4 flex flex-wrap gap-2">
-        {project.stack.map((tag) => (
-          <span
-            key={tag}
-            className="px-2 py-1 text-xs bg-gray-800 text-gray-300 border border-gray-700 rounded-md"
-          >
+            {primaryFocus && (
+                <div className="mb-3">
+          <span className="inline-block px-3 py-1 text-[11px] font-semibold tracking-wide uppercase rounded-full bg-green-500/15 text-black border border-blue-400/20">
+            {primaryFocus}
+          </span>
+                </div>
+            )}
+
+            <h3 className="text-xl font-bold font-sans text-white leading-snug">
+                {project.title}
+            </h3>
+
+            <p className="text-gray-300 mt-3 text-sm leading-6 line-clamp-3">
+                {project.description}
+            </p>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+                {topHighlights.map((tag) => (
+                    <span
+                        key={tag}
+                        className="px-2.5 py-1 text-xs rounded-md bg-purple-200  text-gray-700 border border-white/10"
+                    >
             {tag}
           </span>
-        ))}
-      </div>
+                ))}
+            </div>
 
-      <div className="flex gap-3 mt-6">
-        <button
-          onClick={() => onOpen(project)}
-          className="px-4 py-2 rounded-md border border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-black transition"
-        >
-          View Details
-        </button>
-        <a
-          href={project.repo}
-          target="_blank"
-          className="px-4 py-2 rounded-md border border-gray-600 text-gray-300 hover:bg-gray-700 transition"
-        >
-          Source/Live
-        </a>
-      </div>
-    </div>
-  );
+            <div className="mt-auto pt-6 flex gap-3">
+                <button
+                    onClick={() => onOpen(project)}
+                    className="px-4 py-2 rounded-md border border-blue-500 text-blue-300 hover:bg-blue-500 hover:text-black transition font-medium"
+                >
+                    View Architecture
+                </button>
+
+                <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-4 py-2 rounded-md border border-gray-600 text-gray-300 hover:bg-gray-700 transition font-medium"
+                >
+                    Source / Live
+                </a>
+            </div>
+        </div>
+    );
 }
