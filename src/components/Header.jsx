@@ -20,7 +20,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-muted backdrop-blur-sm border-b border-gray-800 shadow-xl">
+    <header className="sticky top-0 z-50 backdrop-blur-sm border-b border-gray-800 shadow-xl">
       <div className="container flex justify-between items-center h-20">
         <a
           href="#home"
@@ -48,7 +48,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-gray-400 hover:text-indigo-400 p-2 rounded-md transition"
+          className="md:hidden text-gray-900 hover:text-indigo-400 p-2 rounded-md transition"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
@@ -58,14 +58,14 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gray-950 border-t border-gray-800 shadow-inner">
+        <div className="md:hidden bg-green-500/20 border-t border-gray-800 shadow-inner">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-indigo-400 transition duration-150 ease-in-out"
+                className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-800 hover:text-indigo-400 transition duration-150 ease-in-out"
               >
                 <link.icon size={20} />
                 <span>{link.name}</span>
