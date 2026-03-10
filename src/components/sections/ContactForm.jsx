@@ -103,13 +103,13 @@ export default function ContactForm() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
-            <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur p-5 sm:p-7 shadow-lg hover:border-emerald-400/30 transition">
+            <div className="bg-white text-gray-900 border border-gray-200 shadow-lg rounded-2xl p-6">
                 <div className="flex items-start justify-between gap-4">
                     <div>
-                        <h2 className="text-xl sm:text-2xl font-semibold text-white">
+                        <h2 className="text-xl sm:text-2xl font-semibold">
                             Contact Me
                         </h2>
-                        <p className="mt-1 text-sm text-white/70">
+                        <p className="mt-1 text-sm">
                             Send a message - it will land directly in my Discord.
                         </p>
                     </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
                     </motion.div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-4 bg-green-500/20 p-4 rounded-lg">
                     {/* Name + Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <Field
@@ -163,7 +163,7 @@ export default function ContactForm() {
 
                     {/* Message */}
                     <div>
-                        <label className="text-sm text-gray-200">Message</label>
+                        <label className="text-sm">Message</label>
                         <motion.div
                             className={[
                                 "mt-2 rounded-xl border bg-black/20",
@@ -175,7 +175,7 @@ export default function ContactForm() {
                             transition={{ duration: 0.15 }}
                         >
               <textarea
-                  className="w-full min-h-[140px] resize-y bg-transparent px-4 py-3 text-white outline-none placeholder:text-gray-200 bg-white/5"
+                  className="w-full min-h-[140px] resize-y bg-transparent px-4 py-3 outline-none placeholder:text-gray-900 bg-white/5"
                   value={form.message}
                   onChange={onChange("message")}
                   onBlur={onBlur("message")}
@@ -242,7 +242,7 @@ export default function ContactForm() {
                         </motion.button>
 
                         <p className="text-xs text-emerald-500">
-                            Or email: <span className="text-emerald-300">jeetthakkar2612@gmail.com</span>
+                            Or email: <span className="text-emerald-700">jeetthakkar2612@gmail.com</span>
                         </p>
                     </div>
                 </form>
@@ -263,7 +263,7 @@ function Field({
                }) {
     return (
         <div>
-            <label className="text-sm text-gray-200">{label}</label>
+            <label className="text-sm">{label}</label>
             <motion.div
                 className={[
                     "mt-2 rounded-xl border bg-black/20",
@@ -273,7 +273,7 @@ function Field({
                 transition={{ duration: 0.15 }}
             >
                 <input
-                    className="w-full bg-transparent px-4 py-3 text-white outline-none placeholder:text-gray-200 bg-white/5"
+                    className="w-full bg-transparent px-4 py-3 outline-none placeholder:text-gray-900 bg-white/5"
                     value={value}
                     onChange={onChange}
                     onBlur={onBlur}

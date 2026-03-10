@@ -1,5 +1,37 @@
 export const projects = [
     {
+        "title": "CloudVault – Personal Cloud Storage with Distributed Upload Pipeline",
+        "stack": [
+            "Java",
+            "Spring Boot",
+            "Apache Kafka",
+            "PostgreSQL",
+            "Redis",
+            "Docker",
+            "REST APIs",
+            "Chunked File Upload",
+            "Event-Driven Architecture",
+            "Distributed Systems",
+            "Oracle VM Instance"
+        ],
+        "repo": "https://personal-cloud-storage-two.vercel.app",
+        "description": "CloudVault is a backend-focused personal cloud storage system designed to support large file uploads using chunked transfer, Kafka-based event streaming, and distributed processing. The project demonstrates scalable backend architecture, reliable upload pipelines, and cloud-style storage workflows similar to real-world systems like Google Drive or Dropbox.",
+        "details": [
+            "Designed a chunked file upload system allowing large files to be split into parts and uploaded reliably.",
+            "Used Apache Kafka to publish upload events and process file chunks asynchronously.",
+            "Implemented worker consumers to merge file chunks and finalize uploads without blocking the main API.",
+            "Stored file metadata and upload state in PostgreSQL for consistency and recovery support.",
+            "Used Redis for temporary upload session tracking and fast state lookup.",
+            "Built REST APIs for upload start, chunk transfer, completion, and file retrieval.",
+            "Designed the system using event-driven architecture to simulate real cloud storage pipelines.",
+            "Containerized services using Docker to run API, Kafka, Redis, and DB together.",
+            "Focused on scalability, fault tolerance, and distributed processing patterns.",
+            "Optimized backend to support concurrent uploads from multiple users."
+        ],
+        "img_src": "imgs/cloudVault_project.png",
+        "role_focus": "Distributed Systems, Event-Driven Architecture, Kafka Integration, Backend Infrastructure, Cloud Storage Design"
+    },
+    {
         "title": "ModuPro – Multi-Tenant Store Management SaaS",
         "stack": [
             "Next.js (App Router)",
