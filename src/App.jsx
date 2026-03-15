@@ -30,7 +30,7 @@ export default function App() {
                                 >
                                     I am a backend-focused software engineer passionate about building scalable,
                                     reliable systems that solve real-world problems. While I enjoy working across
-                                    the stack, my core focus is on backend engineering—designing clean APIs,
+                                    the stack, my core focus is on backend engineering :- designing clean APIs,
                                     asynchronous workflows, and maintainable architectures. I build modern interfaces
                                     with React, Next.js and Tailwind CSS, while developing
                                     scalable backend services using Java, Spring Boot, and Node.js.

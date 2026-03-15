@@ -1,6 +1,6 @@
 export const experience = [
     {
-        title: "BridgeCity Solutions — Software Developer (Contract)",
+        title: "BridgeCity Solutions - Software Developer (Contract)",
         type: "Work Experience",
         period: "2025 — Present",
         description:
@@ -16,7 +16,7 @@ export const experience = [
     },
 
     {
-        title: "St. Clair College — Software Development",
+        title: "St. Clair College - Software Development",
         type: "Education",
         period: "2024 — 2026",
         description:
@@ -30,8 +30,8 @@ export const experience = [
     },
 
     {
-        title: "Store-Mate — POS Desktop App",
-        type: "Project",
+        title: "Store-Mate - POS Desktop App",
+        type: "Project at ST Clair College",
         period: "2025",
         description:
             "Standalone point-of-sale platform for retail operations including product workflow, inventory management and supplier module.",
@@ -44,8 +44,8 @@ export const experience = [
     },
 
     {
-        title: "DR-DESK — Patient Management Suite",
-        type: "Project",
+        title: "DR-DESK - Patient Management Suite",
+        type: "Project at ST Clair College",
         period: "2025",
         description:
             "Clinic management system for scheduling visits, patient history, and medical record tracking.",
@@ -58,8 +58,8 @@ export const experience = [
     },
 
     {
-        title: "Monolith → Microservices Refactor",
-        type: "Architecture",
+        title: "Monolith - Microservices Refactor",
+        type: "Project at ST Clair College",
         period: "2025",
         description:
             "Backend decomposition using Spring Boot, domain boundaries, and Docker deployment.",
@@ -73,8 +73,8 @@ export const experience = [
 
     {
         title: "JavaJacks - Blackjack Game",
-        type: "Project",
-        period: "2023",
+        type: "Project at ST Clair College",
+        period: "2024",
         description:
             "JavaFX game implementing turn-based blackjack + card engine.",
         highlights: [

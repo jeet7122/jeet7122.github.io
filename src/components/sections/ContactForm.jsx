@@ -104,7 +104,7 @@ export default function ContactForm() {
             transition={{ duration: 0.5, ease: "easeOut" }}
         >
             <div className="bg-white text-gray-900 border border-gray-200 shadow-lg rounded-2xl p-6">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start gap-4">
                     <div>
                         <h2 className="text-xl sm:text-2xl font-semibold">
                             Contact Me
@@ -115,13 +115,13 @@ export default function ContactForm() {
                     </div>
 
                     <motion.div
-                        className="hidden sm:flex items-center gap-2 rounded-full px-3 py-1 text-xs border border-white/10 bg-white/5 text-black/70"
+                        className="hidden sm:flex items-center rounded-full py-1 gap-1 text-xs border border-white/10 bg-white/5 text-black/70"
                         initial={{ opacity: 0, x: 8 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
                         viewport={{ once: true }}
                     >
-                        <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="inline-block h-2 w-2 rounded-full bg-orange-600 animate-pulse" />
                         Replies within 24hr
                     </motion.div>
                 </div>

@@ -121,13 +121,13 @@ export default function HomeHero() {
 
                             <motion.a
                                 variants={textItem}
-                                href="#contact"
-                                onClick={(e) => scrollToSection(e, "#contact")}
+                                href="/$Resume_Jeet.pdf"
+                                download="Jeet-Thakkar-Resume.pdf"
                                 whileHover={{ scale: 1.04 }}
                                 whileTap={{ scale: 0.96 }}
                                 className="inline-flex items-center justify-center px-8 py-3 rounded-xl border border-indigo-400 text-indigo-400 hover:bg-indigo-900 hover:text-white focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-50"
                             >
-                                Available for collaborations
+                                Download Resume
                                 <ArrowRight className="ml-2 w-4 h-4" />
                             </motion.a>
                         </motion.div>
