@@ -37,7 +37,7 @@ export const projects = [
             "Distributed Systems",
             "Real-Time Processing"
         ],
-        "repo": "https://github.com/jeet7122/scanforge",
+        "repo": "https://github.com/jeet7122/scanforge-ai",
         "description": "ScanForge is a distributed code scanning platform designed to process files asynchronously using Kafka-based event pipelines and deliver real-time scan results. The system demonstrates scalable microservices architecture, low-latency processing, and reliable event handling with idempotent guarantees.",
         "details": [
             "Architected an event-driven microservices system using Apache Kafka to decouple file ingestion, analysis, and result delivery.",
