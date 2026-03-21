@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Zap, ArrowRight, CornerRightUp } from "lucide-react";
-import { Icon } from "@iconify/react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, {useState, useEffect} from "react";
+import {Zap, ArrowRight, CornerRightUp} from "lucide-react";
+import {Icon} from "@iconify/react";
+import {motion, AnimatePresence} from "framer-motion";
 import {ProfileAvatar} from "./ProfileAvatar.jsx";
 
 const heroSkills = [
-    { name: "React", color: "text-blue-400", icon: <Icon icon="logos:react" /> },
-    { name: "JavaFX", color: "text-white", icon: "▲" },
-    { name: "Tailwind", color: "text-cyan-400", icon: <Icon icon="logos:tailwindcss-icon" /> },
-    { name: "Java", color: "text-blue-500", icon: <Icon icon="logos:java" /> },
-    { name: "Node.js", color: "text-green-500", icon: <Icon icon="logos:nodejs-icon" /> },
-    { name: "MYSQL", color: "text-yellow-500", icon: <Icon icon="logos:mysql-icon" /> },
-    { name: "Next.js", color: "text-white/60", icon: <Icon icon="logos:nextjs-icon" /> },
-    { name: "TypeScript", color: "text-blue-600", icon: <Icon icon="logos:typescript-icon" /> },
+    {name: "React", color: "text-blue-400", icon: <Icon icon="logos:react"/>},
+    {name: "JavaFX", color: "text-white", icon: "▲"},
+    {name: "Tailwind", color: "text-cyan-400", icon: <Icon icon="logos:tailwindcss-icon"/>},
+    {name: "Java", color: "text-blue-500", icon: <Icon icon="logos:java"/>},
+    {name: "Node.js", color: "text-green-500", icon: <Icon icon="logos:nodejs-icon"/>},
+    {name: "MYSQL", color: "text-yellow-500", icon: <Icon icon="logos:mysql-icon"/>},
+    {name: "Next.js", color: "text-white/60", icon: <Icon icon="logos:nextjs-icon"/>},
+    {name: "TypeScript", color: "text-blue-600", icon: <Icon icon="logos:typescript-icon"/>},
 ];
 
 // Text animation variants
@@ -27,11 +27,11 @@ const textContainer = {
 };
 
 const textItem = {
-    hidden: { opacity: 0, y: 16 },
+    hidden: {opacity: 0, y: 16},
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
+        transition: {duration: 0.6, ease: "easeOut"},
     },
 };
 
@@ -51,20 +51,20 @@ export default function HomeHero() {
     const scrollToSection = (e, href) => {
         e.preventDefault();
         const id = href.substring(1);
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
     };
 
     return (
-        <section id="home" className="pt-24 min-h-screen flex items-center bg-background">
+        <section id="home" className="pt-24 lg:min-h-screen flex items-center bg-background">
             <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
+                initial={{opacity: 0, y: 24}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.7, ease: "easeOut"}}
                 className="w-full"
             >
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     {/* LEFT */}
-                    <div className="lg:col-span-8 space-y-8 text-center lg:text-left">
+                    <div className="order-2 lg:order-1 lg:col-span-8 space-y-8 text-center lg:text-left">
                         <motion.div
                             variants={textContainer}
                             initial="hidden"
@@ -83,20 +83,27 @@ export default function HomeHero() {
                                 variants={textItem}
                                 className="text-2xl sm:text-3xl lg:text-5xl font-semibold text-gray-400 flex justify-center lg:justify-start items-center space-x-3"
                             >
-                                <Zap className="w-6 h-6 text-indigo-400" />
-                                <span>Software Engineer</span>
+                                <Zap className="w-6 h-6 text-indigo-400"/>
+                                <span>Software Developer</span>
                             </motion.h2>
+                            <motion.div
+                                variants={textItem}
+                                className="flex justify-center lg:justify-start"
+                            >
+                                <div
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-400/30 text-indigo-800 text-sm font-medium">
+                                    🏆 1st Place - ST. Clair IT CLUB Hackathon Winner - 2026
+                                    <span className="text-gray-400 hidden sm:inline">
+            (Built real-time system in 4 hours)
+        </span>
+                                </div>
+                            </motion.div>
 
                             <motion.p
                                 variants={textItem}
                                 className="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0"
                             >
-                                Relentless self-taught developer, passionate about crafting
-                                high-performance{" "}
-                                <span className="font-semibold text-indigo-300">
-                  Fullstack
-                </span>{" "}
-                                solutions, and driven to grow rapidly in the tech industry.
+                                Backend-focused engineer building distributed, event-driven systems with a focus on performance, scalability, and real-time processing.
                             </motion.p>
                         </motion.div>
 
@@ -111,36 +118,37 @@ export default function HomeHero() {
                                 variants={textItem}
                                 href="#contact"
                                 onClick={(e) => scrollToSection(e, "#contact")}
-                                whileHover={{ scale: 1.04 }}
-                                whileTap={{ scale: 0.96 }}
+                                whileHover={{scale: 1.04}}
+                                whileTap={{scale: 0.96}}
                                 className="text-white/70 inline-flex items-center justify-center px-8 py-3 rounded-xl shadow-lg btn-primary focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50"
                             >
                                 Hire Me!
-                                <CornerRightUp className="ml-2 w-4 h-4" />
+                                <CornerRightUp className="ml-2 w-4 h-4"/>
                             </motion.a>
 
                             <motion.a
                                 variants={textItem}
-                                href="/$Resume_Jeet.pdf"
+                                href="/$Jeet_Resume_SDE.pdf"
                                 download="Jeet-Thakkar-Resume.pdf"
-                                whileHover={{ scale: 1.04 }}
-                                whileTap={{ scale: 0.96 }}
+                                whileHover={{scale: 1.04}}
+                                whileTap={{scale: 0.96}}
                                 className="inline-flex items-center justify-center px-8 py-3 rounded-xl border border-indigo-400 text-indigo-400 hover:bg-indigo-900 hover:text-white focus:ring-4 focus:ring-indigo-400 focus:ring-opacity-50"
                             >
                                 Download Resume
-                                <ArrowRight className="ml-2 w-4 h-4" />
+                                <ArrowRight className="ml-2 w-4 h-4"/>
                             </motion.a>
                         </motion.div>
 
                         {/* Skill Rotator */}
-                        <div className="mt-8 pt-4 border-t border-gray-800 flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <div
+                            className="mt-8 pt-4 border-t border-gray-800 flex flex-wrap gap-4 justify-center lg:justify-start">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={currentSkill.name}
-                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                                    transition={{ duration: 0.4 }}
+                                    initial={{opacity: 0, y: 10, scale: 0.95}}
+                                    animate={{opacity: 1, y: 0, scale: 1}}
+                                    exit={{opacity: 0, y: -10, scale: 0.95}}
+                                    transition={{duration: 0.4}}
                                     className={`flex items-center space-x-2 p-3 rounded-full bg-gray-800 shadow-xl border-2 border-indigo-500/50 ${currentSkill.color}`}
                                 >
                                     <span className="text-xl">{currentSkill.icon}</span>
@@ -156,14 +164,14 @@ export default function HomeHero() {
                         </div>
                     </div>
                     {/* RIGHT */}
-                    <div className="lg:col-span-4 flex justify-center lg:justify-end mb-20">
+                    <div className="order-1 lg:order-2 lg:col-span-4 flex justify-center lg:justify-end mt-10 lg:mt-0">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.96 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+                            initial={{opacity: 0, scale: 0.96}}
+                            animate={{opacity: 1, scale: 1}}
+                            transition={{delay: 0.2, duration: 0.6, ease: "easeOut"}}
                             className="relative"
                         >
-                            <ProfileAvatar src="imgs/jeet.png" alt="Jeet Thakkar" initials="JT" />
+                            <ProfileAvatar src="imgs/jeet.png" alt="Jeet Thakkar" initials="JT"/>
                         </motion.div>
                     </div>
 

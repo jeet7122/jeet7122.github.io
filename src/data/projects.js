@@ -1,5 +1,58 @@
 export const projects = [
     {
+        "title": "Schedule Processing System – Real-Time Conflict Detection Engine",
+        "stack": [
+            "Next.js",
+            "TypeScript",
+            "JSON Processing",
+            "Data Validation",
+            "Algorithm Design",
+            "Real-Time UI",
+            "Frontend Architecture"
+        ],
+        "repo": "https://github.com/jeet7122/hackathon-it-stclair",
+        "description": "A real-time schedule processing system built under a 4-hour hackathon constraint, designed to ingest heterogeneous datasets, validate data integrity, and detect scheduling conflicts efficiently. The project demonstrates rapid problem-solving, algorithm design, and robust data handling under time pressure.",
+        "details": [
+            "🏆 Won 1st place at St. Clair IT Club Hackathon 2026, competing against multiple teams within a 4-hour build window.",
+            "Engineered a type-safe data ingestion pipeline to process and normalize 3 distinct JSON schemas (classes, exams, timetables).",
+            "Implemented validation logic to detect null values, malformed timestamps, and schema inconsistencies before processing.",
+            "Designed a conflict detection algorithm that analyzed 500+ schedule entries in under 200ms with zero missed conflicts.",
+            "Built structured error aggregation to surface all validation issues in a single pass, improving debugging efficiency by ~40%.",
+            "Delivered a responsive calendar UI that visualizes conflicts and provides actionable feedback to users in real time."
+        ],
+        "img_src": "imgs/hackathon.png",
+        "role_focus": "Hackathon Winner Project 🏆, Data Processing, Real-Time Systems, Rapid Prototyping, Frontend Engineering"
+    },
+    {
+        "title": "ScanForge – Distributed Code Scanning Platform",
+        "stack": [
+            "Java",
+            "Spring Boot",
+            "Apache Kafka",
+            "WebSockets",
+            "Docker",
+            "Next.js",
+            "Event-Driven Architecture",
+            "Microservices",
+            "Distributed Systems",
+            "Real-Time Processing"
+        ],
+        "repo": "https://github.com/jeet7122/scanforge",
+        "description": "ScanForge is a distributed code scanning platform designed to process files asynchronously using Kafka-based event pipelines and deliver real-time scan results. The system demonstrates scalable microservices architecture, low-latency processing, and reliable event handling with idempotent guarantees.",
+        "details": [
+            "Architected an event-driven microservices system using Apache Kafka to decouple file ingestion, analysis, and result delivery.",
+            "Implemented idempotent Kafka producers and consumer-side deduplication to ensure safe retries and eliminate duplicate processing.",
+            "Achieved sub-2-second end-to-end scan feedback for 95% of requests by removing synchronous bottlenecks and enabling parallel execution.",
+            "Scaled system to handle 10+ concurrent file scans using Kafka consumer groups for horizontal workload distribution.",
+            "Designed real-time communication layer using WebSockets to stream scan progress updates, eliminating polling overhead.",
+            "Defined strict Kafka message schemas as inter-service contracts, preventing integration regressions across distributed services.",
+            "Containerized all services using Docker for consistent local and production-like environments.",
+            "Focused on scalability, fault tolerance, and clean separation of concerns across microservices."
+        ],
+        "img_src": "imgs/scanforge_project.png",
+        "role_focus": "Distributed Systems, Event-Driven Architecture, Kafka Integration, Idempotent Processing, Microservices Design"
+    },
+    {
         "title": "CloudVault – Personal Cloud Storage with Distributed Upload Pipeline",
         "stack": [
             "Java",
@@ -270,21 +323,5 @@ export const projects = [
         ],
         "img_src": "imgs/aiass_project.png",
         "role_focus": "Fullstack Development, Asynchronous API Integration, Chrome Extension Implementation"
-    },
-    {
-        "title": "Let_Us_Connect - Project Collaboration Hub",
-        "stack": ["Next.js", "TypeScript", "Tailwind CSS", "Role-Based Access Control (RBAC)", "SMTP/Mailto Integration", "Database Management"],
-        "repo": "https://letusconnect-st.vercel.app",
-        "description": "A centralized networking platform designed for developers to showcase project ideas and find collaborators. The platform features a moderated submission workflow where an admin dashboard manages project visibility, ensuring high-quality content for the community of viewers.",
-        "details": [
-            "Architected a multi-role user system with dedicated views for Admins (moderation) and Viewers (collaboration).",
-            "Implemented an Admin Approval Workflow to vet project submissions, allowing for the approval or rejection of posts before they go live.",
-            "Integrated seamless collaboration triggers by mapping user profiles to direct email communication and GitHub repository links.",
-            "Designed a project showcase UI that highlights project overviews, technical goals, and development roadmaps to attract relevant contributors.",
-            "Built a responsive project discovery feed using Next.js, optimizing for fast navigation and clear calls-to-action (CTA) for collaboration.",
-            "Developed secure form handling with TypeScript to manage project metadata, including repository validation and contact information."
-        ],
-        "img_src": "imgs/ltc_project.png",
-        "role_focus": "Product Engineering, Workflow Automation, RBAC Implementation, UI/UX Design"
-    },
+    }
 ]
