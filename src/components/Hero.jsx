@@ -55,16 +55,16 @@ export default function HomeHero() {
     };
 
     return (
-        <section id="home" className="pt-24 lg:min-h-screen flex items-center bg-background">
+        <section id="home" className="pt-24 lg:min-h-[85vh] flex items-start bg-background">
             <motion.div
                 initial={{opacity: 0, y: 24}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.7, ease: "easeOut"}}
                 className="w-full"
             >
-                <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="container grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     {/* LEFT */}
-                    <div className="order-2 lg:order-1 lg:col-span-8 space-y-8 text-center lg:text-left">
+                    <div className="order-2 lg:order-1 space-y-8 lg:col-span-8 text-center lg:text-left">
                         <motion.div
                             variants={textContainer}
                             initial="hidden"
@@ -171,7 +171,7 @@ export default function HomeHero() {
                             transition={{delay: 0.2, duration: 0.6, ease: "easeOut"}}
                             className="relative"
                         >
-                            <ProfileAvatar src="imgs/jeet.png" alt="Jeet Thakkar" initials="JT"/>
+                            <ProfileAvatar src="imgs/jeet.png" alt="Profile Picture" initials="JT"/>
                         </motion.div>
                     </div>
 

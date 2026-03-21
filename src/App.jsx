@@ -20,8 +20,8 @@ export default function App() {
             <main>
                 <HomeHero/>
                 <AnimatedSection>
-                    <ContentSection id="about" title="About Me" className="section">
-                        <div className="max-w-6xl text-gray-300 space-y-6 text-lg leading-relaxed">
+                    <ContentSection id="about" title="About Me" className='py-16'>
+                        <div className="max-w-6xl text-gray-300 text-lg leading-relaxed">
                             <p>
                                 <AnimatedText
                                     isVisible={step >= 0}
