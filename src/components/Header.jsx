@@ -1,79 +1,93 @@
 import React, { useState } from "react";
-import { Menu, X, Home, User, Code, Briefcase, Mail } from "lucide-react";
+import { Menu, X, Home, User, Code, Briefcase, Mail, Cpu } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#home", icon: Home },
-  { name: "About", href: "#about", icon: User },
-  { name: "Projects", href: "#projects", icon: Code },
-  { name: "Experience", href: "#experience", icon: Briefcase },
-  { name: "Contact", href: "#contact", icon: Mail },
+    { name: "Home", href: "#home", icon: Home },
+    { name: "About", href: "#about", icon: User },
+    { name: "Technologies", href: "#technology", icon: Cpu  },
+    { name: "Projects", href: "#projects", icon: Code },
+    { name: "Experience", href: "#experience", icon: Briefcase },
+    { name: "Contact", href: "#contact", icon: Mail },
 ];
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (e, href) => {
-    e.preventDefault();
-    const id = href.substring(1);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
+    const scrollToSection = (e, href) => {
+        e.preventDefault();
+        const id = href.substring(1);
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
+    };
 
-  return (
-    <header className="sticky top-0 z-50 backdrop-blur-sm border-b border-gray-800 shadow-xl">
-      <div className="container flex justify-between items-center h-20">
-        <a
-          href="#home"
-          onClick={(e) => scrollToSection(e, "#home")}
-          className="text-2xl font-bold tracking-tight text-indigo-400 flex items-center group"
-        >
-          <span className="text-3xl mr-1">J</span>
-          <span className="group-hover:text-indigo-400 transition-colors duration-300 text-red-900">
-            Thakkar.
-          </span>
-        </a>
+    return (
+        <header className="sticky top-4 z-50 flex justify-center mb-10 md:mb-0">
 
-        <nav className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-lime-900 hover:text-indigo-400 transition duration-150 ease-in-out font-medium relative group"
-            >
-              {link.name}
-              <span className="absolute left-0 bottom[-4px] w-full h-0.5 bg-indigo-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </a>
-          ))}
-        </nav>
+            {/* NAV CONTAINER */}
+            <div className="w-[95%] max-w-6xl bg-white/60 flex items-center justify-between h-18 px-6 rounded-2xl backdrop-blur-xl border-3 border-orange-200 pulse shadow-lg">
 
-        <button
-          className="md:hidden text-gray-900 hover:text-indigo-400 p-2 rounded-md transition"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+                {/* LOGO */}
+                <a
+                    href="#home"
+                    onClick={(e) => scrollToSection(e, "#home")}
+                    className="text-lg font-bold text-gray-900 tracking-tight"
+                >
+                    <span className="text-indigo-600">J.</span>Thakkar
+                </a>
 
-      {isOpen && (
-        <div className="md:hidden bg-green-500/20 border-t border-gray-800 shadow-inner">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-800 hover:text-indigo-400 transition duration-150 ease-in-out"
-              >
-                <link.icon size={20} />
-                <span>{link.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-    </header>
-  );
+                {/* DESKTOP NAV */}
+                <nav className="hidden md:flex items-center justify-center p-2">
+                    <div className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/80 backdrop-blur border-1 border-blue-300 shadow-md animate-pulse-fade">
+
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) => scrollToSection(e, link.href)}
+                                className="relative px-4 py-2 text-sm font-medium text-gray-700 rounded-full transition-all duration-300 group"
+                            >
+                                {/* Hover Background */}
+                                <span className="absolute inset-0 rounded-full bg-indigo-100 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+
+                                {/* Text */}
+                                <span className="relative z-10 group-hover:text-indigo-600">
+                  {link.name}
+                </span>
+                            </a>
+                        ))}
+
+                    </div>
+                </nav>
+
+                {/* MOBILE BUTTON */}
+                <button
+                    className="md:hidden text-gray-900 hover:text-indigo-600 p-2 rounded-md transition"
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-expanded={isOpen}
+                    aria-label="Toggle navigation menu"
+                >
+                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </div>
+
+            {/* MOBILE MENU */}
+            {isOpen && (
+                <div className="md:hidden absolute top-20 w-[95%] max-w-6xl bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-xl">
+                    <div className="px-4 py-4 space-y-2">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) => scrollToSection(e, link.href)}
+                                className="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-800 hover:bg-indigo-50 hover:text-indigo-600 transition"
+                            >
+                                <link.icon size={18} />
+                                <span className="font-medium">{link.name}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </header>
+    );
 }

@@ -48,7 +48,7 @@ export default function ProjectsSection() {
     };
 
     return (
-        <ContentSection id="projects" title="Shipped Projects" className="bg-green-500/20">
+        <ContentSection id="projects" title="Shipped Projects" className='bg-blue-400/15' >
             <div ref={containerRef} className="w-full">
                 <motion.div
                     ref={inViewRef}

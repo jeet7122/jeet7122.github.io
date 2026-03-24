@@ -126,7 +126,7 @@ export default function ContactForm() {
                     </motion.div>
                 </div>
 
-                <form onSubmit={handleSubmit} className="mt-6 space-y-4 bg-green-500/20 p-4 rounded-lg">
+                <form onSubmit={handleSubmit} className="mt-6 space-y-4 bg-blue-400/15 p-4 rounded-lg">
                     {/* Name + Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <Field

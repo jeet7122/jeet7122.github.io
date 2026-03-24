@@ -19,14 +19,14 @@ export default function ExperienceItem({ item, itemRef }) {
                     <p className="text-gray-500">{item.period}</p>
                 </div>
 
-                <p className="mt-4 text-gray-300 leading-relaxed">
+                <p className="mt-4 text-blue-900 leading-relaxed">
                     {item.description}
                 </p>
 
                 <ul className="mt-4 space-y-2">
                     {item.highlights.map((h, i) => (
-                        <li key={i} className="flex items-start text-gray-400 text-sm">
-                            <span className="mr-2 text-indigo-500">•</span>
+                        <li key={i} className="flex items-start text-indigo-800 text-sm">
+                            <span className="mr-2 text-indigo-800">•</span>
                             {h}
                         </li>
                     ))}
