@@ -15,7 +15,7 @@ export const projects = [
             "Distributed Systems",
             "Code Sandboxing"
         ],
-        "repo": "https://github.com/your-repo-link",
+        "repo": "https://github.com/jeet7122/code_execution_platform",
         "description": "A LeetCode-style distributed code execution platform designed to securely run user-submitted code, evaluate it against test cases, and return real-time results. The system emphasizes scalability, isolation, and reliable execution using containerized environments and event-driven processing.",
         "details": [
             "Designed a secure code execution pipeline using Docker containers to isolate user-submitted code and prevent system-level interference.",
@@ -46,7 +46,7 @@ export const projects = [
             "Event-Driven Architecture",
             "Docker"
         ],
-        "repo": "https://github.com/your-repo-link",
+        "repo": "https://github.com/jeet7122/streaming_platform",
         "description": "A scalable backend system for a video streaming platform built using microservices architecture. The platform supports video uploads, user interactions, and real-time event processing using Kafka, demonstrating production-grade backend design patterns similar to YouTube or Netflix systems.",
         "details": [
             "Architected a microservices-based backend including API Gateway, User Service (JWT auth), Video Service, Like Service, and Comment Service.",
