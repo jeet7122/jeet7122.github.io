@@ -1,5 +1,70 @@
 export const projects = [
     {
+        "title": "Code Execution Platform – Distributed Code Submission & Evaluation System",
+        "stack": [
+            "Java",
+            "Spring Boot",
+            "Node.js",
+            "Express.js",
+            "Docker",
+            "Kafka",
+            "MongoDB",
+            "Redis",
+            "Microservices",
+            "REST APIs",
+            "Distributed Systems",
+            "Code Sandboxing"
+        ],
+        "repo": "https://github.com/your-repo-link",
+        "description": "A LeetCode-style distributed code execution platform designed to securely run user-submitted code, evaluate it against test cases, and return real-time results. The system emphasizes scalability, isolation, and reliable execution using containerized environments and event-driven processing.",
+        "details": [
+            "Designed a secure code execution pipeline using Docker containers to isolate user-submitted code and prevent system-level interference.",
+            "Built a submission service to accept code, language, and problem metadata, triggering asynchronous evaluation workflows.",
+            "Implemented Kafka-based event-driven architecture to decouple submission handling from execution workers.",
+            "Developed distributed worker services to execute code against multiple test cases in parallel, improving evaluation speed.",
+            "Implemented execution time limits and memory constraints to prevent infinite loops and resource abuse.",
+            "Stored submission results, execution logs, and verdicts (AC, WA, TLE, RE) in PostgreSQL for auditability and analytics.",
+            "Used Redis for caching frequently accessed problems and reducing database load.",
+            "Designed extensible judge logic supporting multiple programming languages (Java, Python, C++).",
+            "Built failure-safe retry mechanisms for execution jobs to ensure reliability under high load.",
+            "Focused on scalability, fault isolation, and real-world competitive programming system design."
+        ],
+        "img_src": "imgs/code_execution_platform.png",
+        "role_focus": "Distributed Systems, Code Execution Engine, Microservices Architecture, Docker Isolation, Event-Driven Processing"
+    },
+    {
+        "title": "StreamFlow – Microservices-Based Video Streaming Platform",
+        "stack": [
+            "Java",
+            "Spring Boot",
+            "Apache Kafka",
+            "PostgreSQL",
+            "Redis",
+            "JWT Authentication",
+            "API Gateway",
+            "Microservices",
+            "Event-Driven Architecture",
+            "Docker"
+        ],
+        "repo": "https://github.com/your-repo-link",
+        "description": "A scalable backend system for a video streaming platform built using microservices architecture. The platform supports video uploads, user interactions, and real-time event processing using Kafka, demonstrating production-grade backend design patterns similar to YouTube or Netflix systems.",
+        "details": [
+            "Architected a microservices-based backend including API Gateway, User Service (JWT auth), Video Service, Like Service, and Comment Service.",
+            "Implemented secure authentication and authorization using JWT, enabling protected user-specific operations.",
+            "Designed Video Service to handle video metadata, upload workflows, and streaming-related operations.",
+            "Used Apache Kafka for event-driven communication between services (e.g., video uploads, likes, comments).",
+            "Built Like and Comment services with eventual consistency using asynchronous Kafka consumers.",
+            "Implemented API Gateway to centralize routing, authentication, and request filtering across services.",
+            "Used PostgreSQL for persistent storage and Redis for caching frequently accessed data.",
+            "Designed scalable service-to-service communication with clear event contracts to prevent tight coupling.",
+            "Containerized all services using Docker to simulate production-like distributed environments.",
+            "Focused on scalability, modularity, and real-world system design aligned with modern streaming platforms."
+        ],
+        "img_src": "imgs/video_streaming_platform.png",
+        "role_focus": "Microservices Architecture, Event-Driven Systems, Kafka Integration, Backend Engineering, Scalable System Design"
+    },
+
+    {
         "title": "Schedule Processing System – Real-Time Conflict Detection Engine",
         "stack": [
             "Next.js",
