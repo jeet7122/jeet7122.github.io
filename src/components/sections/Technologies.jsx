@@ -5,13 +5,18 @@ import ContentSection from "../layout/ContentSection.jsx";
 
 const techStack = [
     { name: "Java", icon: "logos:java" },
-    { name: "Spring Boot", icon: "logos:spring-icon" },
-    { name: "Kafka", icon: "simple-icons:apachekafka" },
+    {name: "Python", icon: "logos:python" },
     { name: "TypeScript", icon: "logos:typescript-icon" },
     { name: "JavaScript", icon: "logos:javascript" },
-    { name: "Node.js", icon: "logos:nodejs" },
     { name: "SQL", icon: "carbon:sql" },
+    { name: "Spring Boot", icon: "logos:spring-icon" },
+    {name: "Fast API", icon: "logos:fastapi" },
+    { name: "Kafka", icon: "simple-icons:apachekafka" },
+    { name: "Node.js", icon: "logos:nodejs" },
     { name: "MongoDB", icon: "logos:mongodb-icon" },
+    { name: "Linux", icon: "logos:linux-tux" },
+    { name: "Git", icon: "logos:git-icon" },
+    { name: "GitHub", icon: "logos:github-icon" },
     { name: "Docker", icon: "logos:docker-icon" },
     { name: "K8s", icon: "logos:kubernetes" },
     { name: "Oracle", icon: "logos:oracle" },
@@ -20,9 +25,7 @@ const techStack = [
     { name: "Microservices", icon: "mdi:cube-outline" },
     { name: "React", icon: "logos:react" },
     { name: "Next.js", icon: "logos:nextjs-icon" },
-    { name: "Linux", icon: "logos:linux-tux" },
-    { name: "Git", icon: "logos:git-icon" },
-    { name: "GitHub", icon: "logos:github-icon" },
+
 ];
 
 export default function Technologies() {
@@ -55,7 +58,7 @@ export default function Technologies() {
                                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-200/20 to-blue-200/20 opacity-0 group-hover:opacity-100 transition" />
 
                                 {/* Icon */}
-                                <Icon icon={tech.icon} className={tech.name==="Oracle" ? "text-xl" : "text-4xl"} />
+                                <Icon icon={tech.icon} className={tech.name.startsWith("Oracle") || tech.name.startsWith("Fast") ? "text-xl" : "text-4xl"} />
 
                                 {/* Name */}
                                 <p className="text-sm font-semibold text-gray-700">

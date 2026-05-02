@@ -1,5 +1,36 @@
 export const projects = [
     {
+        "title": "ATS Intelligence – AI Resume Scanner & Optimizer",
+        "stack": [
+            "FastAPI",
+            "Python",
+            "PDF Parsing",
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "AI Resume Analysis",
+            "ATS Scoring Engine",
+            "REST APIs",
+            "Full-Stack Development"
+        ],
+        "repo": "https://github.com/jeet7122/ats-intelligence",
+        "description": "ATS Intelligence is an AI-powered resume scanner and optimization platform that analyzes resumes against Applicant Tracking System (ATS) standards, scores keyword relevance, and provides actionable improvements. Built with a modern Next.js frontend and FastAPI backend, the system simulates real hiring pipelines to help candidates improve interview chances.",
+        "details": [
+            "Built a drag-and-drop resume upload workflow supporting PDF parsing and instant analysis feedback.",
+            "Developed a backend ATS scoring engine that evaluates keyword relevance, formatting quality, and resume structure.",
+            "Implemented AI-powered resume optimization suggestions tailored to job descriptions and recruiter expectations.",
+            "Created a responsive dashboard displaying score breakdowns, matched keywords, and missing skill gaps.",
+            "Designed asynchronous API communication between Next.js frontend and FastAPI backend for fast user experience.",
+            "Engineered reusable frontend state management for resume results, edits, and dynamic section updates.",
+            "Focused on clean UI/UX to simplify complex resume analytics into recruiter-friendly insights.",
+            "Structured backend services for scalability, allowing future integration of job-specific scoring models.",
+            "Built the project to simulate real-world ATS hiring systems used by enterprise recruiters.",
+            "Optimized the platform for job seekers aiming to improve callback and interview conversion rates."
+        ],
+        "img_src": "imgs/ats_intelligence.png",
+        "role_focus": "Full-Stack Engineering, AI Integration, Resume Intelligence, FastAPI Backend, Modern Frontend Development"
+    },
+    {
         "title": "Code Execution Platform – Distributed Code Submission & Evaluation System",
         "stack": [
             "Java",

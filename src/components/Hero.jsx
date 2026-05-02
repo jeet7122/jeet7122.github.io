@@ -74,7 +74,7 @@ export default function HomeHero() {
                         </a>
 
                         <a
-                            href="/$Jeet_Resume_SDE.pdf"
+                            href="/Jeet_Resume_SDE.pdf"
                             download
                             className="px-6 py-3 rounded-xl border-3 border-yellow-300 text-gray-700 hover:bg-gray-100 transition"
                         >
