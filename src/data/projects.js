@@ -13,7 +13,7 @@ export const projects = [
             "REST APIs",
             "Full-Stack Development"
         ],
-        "repo": "https://github.com/jeet7122/ats-intelligence",
+        "repo": "https://github.com/jeet7122/ats_resume_intelligence_client",
         "description": "ATS Intelligence is an AI-powered resume scanner and optimization platform that analyzes resumes against Applicant Tracking System (ATS) standards, scores keyword relevance, and provides actionable improvements. Built with a modern Next.js frontend and FastAPI backend, the system simulates real hiring pipelines to help candidates improve interview chances.",
         "details": [
             "Built a drag-and-drop resume upload workflow supporting PDF parsing and instant analysis feedback.",
