@@ -4,7 +4,7 @@ import animationData from "../../data/extra/ppfLottie.json"; // your lottie file
 
 export default function LottieAvatar() {
     return (
-        <div className="w-54 h-54 md:w-108 md:h-70 rounded-2xl overflow-hidden shadow-lg">
+        <div className="w-54 h-54 md:w-128 md:h-70 overflow-hidden">
             <Lottie
                 animationData={animationData}
                 loop={true}

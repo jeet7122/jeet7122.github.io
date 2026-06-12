@@ -27,15 +27,15 @@ export default function HomeHero() {
             <div className="container grid lg:grid-cols-12 gap-12 items-center">
 
                 {/* LEFT */}
-                <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+                <div className="lg:col-span-6 space-y-8 text-center lg:text-left">
 
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight"
+                        className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
                     >
-                        Building Scalable Systems <br />
-                        <span className="text-indigo-600">with Clean Code</span>
+                        <span className='text-green-800'>Building Scalable Systems </span><br />
+                        <span className="text-yellow-400/70">with Clean Code</span>
                     </motion.h1>
 
                     <motion.p
@@ -58,8 +58,8 @@ export default function HomeHero() {
                         >
                             <span className={`text-lg ${skill.color}`}>{skill.icon}</span>
                             <span className="text-sm font-medium text-gray-700">
-                Working with {skill.name}
-              </span>
+                                Working with {skill.name}
+                            </span>
                         </motion.div>
                     </AnimatePresence>
 
@@ -84,16 +84,15 @@ export default function HomeHero() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="lg:col-span-5 flex justify-center">
+                <div className="lg:col-span-6 flex justify-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="p-4 rounded-2xl bg-white shadow-2xl border border-gray-200"
+                        className="p-4 bg-white/10 shadow-2xl"
                     >
                         <LottieAvatar />
                     </motion.div>
                 </div>
-
             </div>
         </section>
     );

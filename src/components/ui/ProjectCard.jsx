@@ -3,7 +3,7 @@ export default function ProjectCard({ project, onOpen }) {
     const topHighlights = project.stack?.slice(0, 3) || [];
 
     return (
-        <div className="card rounded-xl p-5 border border-white/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-blue-400/30 h-full flex flex-col">
+        <div className="card rounded-xl p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-4 hover:border-yellow-400 h-full flex flex-col">
             {project.img_src !== "null" && (
                 <div className="overflow-hidden rounded-lg mb-4">
                     <img

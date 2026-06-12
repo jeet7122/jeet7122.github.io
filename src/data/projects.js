@@ -181,38 +181,6 @@ export const projects = [
         "role_focus": "Distributed Systems, Event-Driven Architecture, Kafka Integration, Backend Infrastructure, Cloud Storage Design"
     },
     {
-        "title": "ModuPro – Multi-Tenant Store Management SaaS",
-        "stack": [
-            "Next.js (App Router)",
-            "TypeScript",
-            "Tailwind CSS",
-            "PostgreSQL + Drizzle ORM",
-            "Clerk Authentication",
-            "Multi-Tenant Architecture",
-            "Role-Based Access Control (RBAC)",
-            "Backend-for-Frontend (BFF) Architecture",
-            "Server Actions & API Routes",
-            "Scalable Modular Design"
-        ],
-        "repo": "https://modu-pro-5nl3.vercel.app",
-        "description": "ModuPro is a multi-tenant SaaS platform that allows stores and businesses to self-register and manage their operations through isolated, role-based dashboards. Built with a Backend-for-Frontend (BFF) architecture, the platform ensures secure tenant isolation, scalable data modeling, and a highly customizable foundation for growing businesses.",
-        "details": [
-            "Designed and implemented a multi-tenant SaaS architecture where each store can self-register and operate in an isolated tenant environment.",
-            "Built a secure onboarding flow allowing businesses to create their own workspace with automated tenant provisioning.",
-            "Implemented role-based access control (RBAC) to support Admin, Staff, and User roles within each tenant.",
-            "Used a Backend-for-Frontend (BFF) pattern to tailor server-side logic and data responses per role and tenant.",
-            "Developed tenant-aware database schemas using Drizzle ORM to ensure strict data isolation across stores.",
-            "Integrated Clerk authentication with custom role and tenant context enforcement.",
-            "Created admin dashboards for store owners to manage users, roles, settings, and business modules.",
-            "Designed modular system components to enable future feature expansion without impacting existing tenants.",
-            "Implemented protected routes and server actions to prevent cross-tenant data access.",
-            "Focused on scalability, maintainability, and clean architecture suitable for production-grade SaaS systems.",
-            "Optimized UI with Tailwind CSS for responsiveness and consistency across tenant dashboards."
-        ],
-        "img_src": "imgs/modu_pro.png",
-        "role_focus": "Full-Stack SaaS Development, Multi-Tenant System Design, Backend-for-Frontend Architecture, Database Modeling, Security & Access Control"
-    },
-    {
         "title": "JobFlow – Distributed Job Processing & Workflow Engine",
         "stack": [
             "Java",
@@ -242,37 +210,6 @@ export const projects = [
         ],
         "img_src": "imgs/job-flow.png",
         "role_focus": "Backend System Design, Distributed Processing, Concurrency Control, Queue-Based Architecture, Scalable Spring Boot Development"
-    },
-    {
-        "title": "API Gateway – Redis Token Bucket Rate Limiting Infrastructure",
-        "stack": [
-            "Java",
-            "Spring Boot",
-            "Spring Security",
-            "JWT Authentication",
-            "Redis",
-            "Token Bucket Rate Limiting",
-            "Distributed Systems",
-            "Docker",
-            "REST APIs",
-            "Gateway Middleware Architecture"
-        ],
-        "repo": "https://github.com/jeet7122/api-gateway-with-limiter",
-        "description": "A backend infrastructure project implementing a lightweight API Gateway with JWT authentication and Redis-backed token bucket rate limiting. The system demonstrates distributed traffic control, gateway middleware design, and scalable request management patterns used in production backend platforms.",
-        "details": [
-            "Designed and implemented an API Gateway architecture using Spring Boot to centralize authentication, request filtering, and traffic control.",
-            "Built a Redis-backed token bucket rate limiting system to protect APIs from abuse and regulate request throughput.",
-            "Implemented user-based rate limiting with IP fallback to ensure fair usage across authenticated and anonymous clients.",
-            "Developed a JWT authentication filter integrated with Spring Security to validate tokens and secure protected endpoints.",
-            "Designed a filter-chain request pipeline to enforce security and traffic policies before requests reach application logic.",
-            "Stored token bucket state in Redis using distributed data structures to support consistent throttling across multiple gateway instances.",
-            "Implemented structured API error responses for rate limit violations and authentication failures.",
-            "Exposed monitoring endpoints to inspect rate limit state including remaining tokens and refill configuration.",
-            "Dockerized the application with Docker Compose to run the API gateway alongside Redis in an isolated container environment.",
-            "Applied modular architecture and separation of concerns for maintainability and extensibility."
-        ],
-        "img_src": "imgs/api_gateway_project.png",
-        "role_focus": "Backend Infrastructure Engineering, Distributed Rate Limiting, API Gateway Architecture, Redis Integration, Security & Traffic Control"
     },
     {
         "title": "Jessica's WebApp – Client-Focused Business Platform",
@@ -331,49 +268,6 @@ export const projects = [
         ],
         "img_src": "imgs/resinique_project.png",
         "role_focus": "Full-Stack Development, E-commerce Architecture, Database Design, Authentication, UI/UX Engineering"
-    },
-    {
-        "title": "Decision_Replay_Engine - AI-Powered Decision Analysis Platform",
-        "stack": [
-            "Next.js (App Router)",
-            "TypeScript",
-            "Tailwind CSS",
-            "Clerk Authentication",
-            "Stripe Payments",
-            "PostgreSQL (Neon)",
-            "Drizzle ORM",
-            "OpenAI API"
-        ],
-        "repo": "https://decision-replay-engine.vercel.app",
-        "description": "An AI-driven decision intelligence platform that helps users log, analyze, and replay past decisions to understand reasoning patterns and improve future outcomes. The system combines structured data capture with AI-generated insights to turn decision-making into a measurable and improvable process.",
-        "details": [
-            "Designed a decision lifecycle system allowing users to record context, options, confidence levels, and reasoning for every decision.",
-            "Implemented AI-powered decision analysis to generate insights, highlight cognitive patterns, and suggest alternative perspectives.",
-            "Built a secure, subscription-based access model using Stripe, enabling gated AI usage and usage-based limits.",
-            "Integrated Clerk authentication to manage user identity, session handling, and protected dashboard routes.",
-            "Developed a replay and outcome tracking mechanism to compare original decisions against real-world results over time.",
-            "Created a responsive dashboard with interactive visual components to track decision history, confidence trends, and outcome accuracy.",
-            "Engineered scalable backend logic using Drizzle ORM and PostgreSQL to ensure type-safe queries and reliable data persistence.",
-            "Optimized UX flows to minimize friction in decision logging while maintaining structured, high-quality data input."
-        ],
-        "img_src": "imgs/decision_replay_engine_project.png",
-        "role_focus": "Full-Stack Product Engineering, AI Integration, Subscription Systems, Data Modeling, UX-Centered Design"
-    },
-    {
-        "title": "Explain-My-Errors - Next.js Error Analysis Platform",
-        "stack": ["Next.js", "TypeScript", "Gemini AI [Model 2.5 Flash]", "Server-Side Rendering (SSR)", "Async Communication", "Database Indexing", "Hashing"],
-        "repo": "https://error-normalizer.vercel.app",
-        "description": "A high-performance error analysis tool that leverages Gemini 2.0 Flash to explain code errors in real-time. Built with Next.js SSR for SEO and speed, the app features an optimized storage layer that utilizes input hashing and indexing for lightning-fast database lookups and error deduplication.",
-        "details": [
-            "Implemented Next.js Server-Side Rendering (SSR) to ensure fast initial page loads and improved SEO for public error logs.",
-            "Integrated Gemini 2.0 Flash API to provide instant, context-aware explanations for complex stack traces and debugging logs.",
-            "Developed a dual-storage strategy saving errors in raw text and SHA-256 hash formats to enable O(1) deduplication and quick database lookups.",
-            "Optimized database performance by creating composite indexes on User IDs and Input Hashes, significantly reducing query latency for returning users.",
-            "Architected an asynchronous communication flow to handle high-volume API requests without blocking the main UI thread.",
-            "Utilized TypeScript for end-to-end type safety, ensuring robust data handling between the Gemini API and the frontend components."
-        ],
-        "img_src": "imgs/error_normalizer_project.png",
-        "role_focus": "Fullstack Engineering, Performance Optimization, Database Architecture, AI Integration"
     },
     {
         "title": "Store-Mate (Desktop POS System)",
