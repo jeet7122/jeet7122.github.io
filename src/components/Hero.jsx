@@ -43,7 +43,7 @@ export default function HomeHero() {
                         animate={{ opacity: 1 }}
                         className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0"
                     >
-                        I'm <span className="font-semibold text-gray-900">Jeet Thakkar</span>, a backend-focused developer crafting
+                        I'm <span className="font-semibold text-gray-900">Jeet Thakkar</span>, a full-stack developer crafting
                         high-performance, distributed systems with real-world impact.
                     </motion.p>
 
