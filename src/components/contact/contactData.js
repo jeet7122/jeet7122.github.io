@@ -9,7 +9,7 @@ export const contacts = [
     {
         title: "LinkedIn",
         value: "linkedin.com/in/jeetthakkar",
-        href: "https://linkedin.com/in/...",
+        href: "https://www.linkedin.com/in/jeet-thakkar-054ba123b",
         icon: "mdi:linkedin",
     },
 

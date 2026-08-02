@@ -75,7 +75,7 @@ export default function HeroButtons() {
                 </a>
 
                 <a
-                    href="https://github.com/yourgithub"
+                    href="https://github.com/jeet7122"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
