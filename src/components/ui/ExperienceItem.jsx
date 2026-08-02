@@ -1,37 +1,98 @@
-// src/components/experience/ExperienceItem.jsx
+import { Icon } from "@iconify/react";
+
 export default function ExperienceItem({ item, itemRef }) {
     return (
-        <div className="relative pl-6 pb-12 mt-10 last:pb-0">
-            {/* POSITION MARKER: This is the anchor point for the blue ball.
-          It's invisible but placed exactly where the ball should center.
-      */}
+        <div className="relative mt-10 pb-12 pl-6 last:pb-0">
+
+            {/* Timeline Marker */}
+
             <span
                 ref={itemRef}
-                className="absolute -left-[8.5px] top-2 w-1 h-1 opacity-0 pointer-events-none"
+                className="pointer-events-none absolute -left-[8.5px] top-2 h-1 w-1 opacity-0"
             />
 
             <div className="group">
-                <h3 className="text-2xl font-semibold text-white group-hover:text-indigo-400 transition-colors">
-                    {item.title}
-                </h3>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 font-mono text-sm">
-                    <p className="text-indigo-400">{item.type}</p>
-                    <p className="text-gray-500">{item.period}</p>
+
+                {/* Header */}
+
+                <div className="flex items-start gap-4">
+
+                    {/* Logo */}
+
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-[var(--border)] bg-white shadow-sm">
+
+                        {item.logoType === "image" ? (
+                            <img
+                                src={item.logo}
+                                alt={item.title}
+                                className={`${item.logoClassName} h-auto object-contain`}
+                            />
+                        ) : (
+                            <Icon
+                                icon={item.logo}
+                                className={item.logoClassName}
+                            />
+                        )}
+
+                    </div>
+
+                    {/* Title */}
+
+                    <div>
+
+                        <h3 className="text-2xl font-semibold text-[var(--text-primary)] transition-colors group-hover:text-indigo-500">
+                            {item.title}
+                        </h3>
+
+                        <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 font-mono text-sm">
+
+                            <p className="text-indigo-500">
+                                {item.type}
+                            </p>
+
+                            <p className="text-[var(--text-muted)]">
+                                {item.period}
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <p className="mt-4 text-blue-900 leading-relaxed">
+                {/* Description */}
+
+                <p className="mt-5 leading-relaxed text-[var(--text-secondary)]">
                     {item.description}
                 </p>
 
-                <ul className="mt-4 space-y-2">
-                    {item.highlights.map((h, i) => (
-                        <li key={i} className="flex items-start text-indigo-800 text-sm">
-                            <span className="mr-2 text-indigo-800">•</span>
-                            {h}
+                {/* Highlights */}
+
+                <ul className="mt-5 space-y-2">
+
+                    {item.highlights.map((highlight) => (
+
+                        <li
+                            key={highlight}
+                            className="flex items-start gap-2 text-sm text-[var(--text-secondary)]"
+                        >
+
+                            <span className="mt-[2px] text-indigo-500">
+                                •
+                            </span>
+
+                            <span>
+                                {highlight}
+                            </span>
+
                         </li>
+
                     ))}
+
                 </ul>
+
             </div>
+
         </div>
     );
 }
